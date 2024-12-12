@@ -1,4 +1,4 @@
-object frmPrincipal: TfrmPrincipal
+object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'ACADEMIA DO C'#211'DIGO - PDV'

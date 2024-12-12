@@ -1,0 +1,234 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Tela de Login'
+  ClientHeight = 755
+  ClientWidth = 1104
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object pnlMain: TPanel
+    Left = 0
+    Top = 0
+    Width = 1104
+    Height = 755
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 0
+    ExplicitLeft = 120
+    ExplicitTop = 24
+    ExplicitWidth = 885
+    ExplicitHeight = 557
+    object pnlLogin: TPanel
+      Left = 704
+      Top = 0
+      Width = 400
+      Height = 755
+      Align = alRight
+      BevelOuter = bvNone
+      Color = clWhite
+      Padding.Left = 60
+      Padding.Top = 150
+      Padding.Right = 60
+      Padding.Bottom = 150
+      ParentBackground = False
+      TabOrder = 0
+      ExplicitLeft = 0
+      ExplicitHeight = 557
+      object pnllogar: TPanel
+        Left = 60
+        Top = 150
+        Width = 280
+        Height = 455
+        Align = alClient
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 0
+        ExplicitLeft = 240
+        ExplicitTop = 304
+        ExplicitWidth = 185
+        ExplicitHeight = 41
+        object pnlTop: TPanel
+          Left = 0
+          Top = 0
+          Width = 280
+          Height = 57
+          Align = alTop
+          BevelOuter = bvNone
+          Caption = 'Login'
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentBackground = False
+          ParentFont = False
+          TabOrder = 0
+          ExplicitLeft = 24
+          ExplicitTop = -6
+        end
+        object pnltop2: TPanel
+          Left = 0
+          Top = 57
+          Width = 280
+          Height = 56
+          Align = alTop
+          BevelOuter = bvNone
+          Color = clWhite
+          ParentBackground = False
+          TabOrder = 1
+          object Label1: TLabel
+            Left = 0
+            Top = 0
+            Width = 280
+            Height = 20
+            Align = alTop
+            Caption = 'Usu'#225'rio'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            ExplicitWidth = 50
+          end
+          object Shape1: TShape
+            AlignWithMargins = True
+            Left = 0
+            Top = 23
+            Width = 280
+            Height = 30
+            Margins.Left = 0
+            Margins.Right = 0
+            Align = alClient
+            Shape = stRoundRect
+            ExplicitLeft = 168
+            ExplicitTop = 8
+            ExplicitWidth = 65
+            ExplicitHeight = 65
+          end
+          object edtUsuario: TEdit
+            AlignWithMargins = True
+            Left = 5
+            Top = 25
+            Width = 270
+            Height = 26
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Align = alClient
+            BevelOuter = bvNone
+            BorderStyle = bsNone
+            CharCase = ecUpperCase
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 0
+          end
+        end
+        object pnltop3: TPanel
+          Left = 0
+          Top = 113
+          Width = 280
+          Height = 56
+          Align = alTop
+          BevelOuter = bvNone
+          Color = clWhite
+          ParentBackground = False
+          TabOrder = 2
+          ExplicitTop = 139
+          object Label2: TLabel
+            Left = 0
+            Top = 0
+            Width = 280
+            Height = 20
+            Align = alTop
+            Caption = 'Senha'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            ExplicitWidth = 40
+          end
+          object Shape2: TShape
+            AlignWithMargins = True
+            Left = 0
+            Top = 23
+            Width = 280
+            Height = 30
+            Margins.Left = 0
+            Margins.Right = 0
+            Align = alClient
+            Shape = stRoundRect
+            ExplicitLeft = 168
+            ExplicitTop = 8
+            ExplicitWidth = 65
+            ExplicitHeight = 65
+          end
+          object edtPassword: TEdit
+            AlignWithMargins = True
+            Left = 5
+            Top = 25
+            Width = 270
+            Height = 26
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Align = alClient
+            BevelOuter = bvNone
+            BorderStyle = bsNone
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            PasswordChar = '*'
+            TabOrder = 0
+          end
+        end
+        object Panel1: TPanel
+          Left = 0
+          Top = 169
+          Width = 280
+          Height = 286
+          Align = alClient
+          BevelOuter = bvNone
+          Color = clWhite
+          ParentBackground = False
+          TabOrder = 3
+          ExplicitLeft = 40
+          ExplicitTop = 64
+          ExplicitWidth = 704
+          ExplicitHeight = 755
+        end
+      end
+    end
+    object pnlImage: TPanel
+      Left = 0
+      Top = 0
+      Width = 704
+      Height = 755
+      Align = alClient
+      BevelOuter = bvNone
+      Color = clWhite
+      ParentBackground = False
+      TabOrder = 1
+      ExplicitLeft = 40
+      ExplicitTop = 64
+    end
+  end
+end

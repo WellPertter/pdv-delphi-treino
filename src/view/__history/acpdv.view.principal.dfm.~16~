@@ -1,4 +1,4 @@
-object frmPrincipal: TfrmPrincipal
+object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'ACADEMIA DO C'#211'DIGO - PDV'
@@ -10,7 +10,9 @@ object frmPrincipal: TfrmPrincipal
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  OldCreateOrder = False
   WindowState = wsMaximized
+  PixelsPerInch = 96
   TextHeight = 13
   object pnlContainer: TPanel
     Left = 0
@@ -20,8 +22,6 @@ object frmPrincipal: TfrmPrincipal
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 1215
-    ExplicitHeight = 718
     object pnlTittle: TPanel
       Left = 0
       Top = 0
@@ -39,7 +39,6 @@ object frmPrincipal: TfrmPrincipal
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 1215
     end
     object pnlMain: TPanel
       Left = 0
@@ -49,8 +48,6 @@ object frmPrincipal: TfrmPrincipal
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitWidth = 1215
-      ExplicitHeight = 558
       object pnlOperacoes: TPanel
         Left = 817
         Top = 0
@@ -62,8 +59,6 @@ object frmPrincipal: TfrmPrincipal
         Padding.Right = 15
         Padding.Bottom = 20
         TabOrder = 0
-        ExplicitLeft = 815
-        ExplicitHeight = 558
         object pnlTotalCompra: TPanel
           Left = 5
           Top = 476
@@ -72,7 +67,6 @@ object frmPrincipal: TfrmPrincipal
           Align = alBottom
           BevelOuter = bvNone
           TabOrder = 0
-          ExplicitTop = 468
           object Label1: TLabel
             Left = 0
             Top = 0
@@ -147,7 +141,6 @@ object frmPrincipal: TfrmPrincipal
           Align = alBottom
           BevelOuter = bvNone
           TabOrder = 1
-          ExplicitTop = 328
           object Label2: TLabel
             Left = 0
             Top = 0
@@ -226,7 +219,6 @@ object frmPrincipal: TfrmPrincipal
           Align = alBottom
           BevelOuter = bvNone
           TabOrder = 2
-          ExplicitTop = 398
           object Label4: TLabel
             Left = 0
             Top = 0
@@ -301,7 +293,6 @@ object frmPrincipal: TfrmPrincipal
           Align = alBottom
           BevelOuter = bvNone
           TabOrder = 3
-          ExplicitTop = 258
           object p: TLabel
             Left = 0
             Top = 0
@@ -376,7 +367,6 @@ object frmPrincipal: TfrmPrincipal
           Align = alBottom
           BevelOuter = bvNone
           TabOrder = 4
-          ExplicitTop = 188
           object Label3: TLabel
             Left = 0
             Top = 0
@@ -459,7 +449,10 @@ object frmPrincipal: TfrmPrincipal
           Padding.Right = 120
           Padding.Bottom = 10
           TabOrder = 5
-          ExplicitHeight = 188
+          ExplicitLeft = 112
+          ExplicitTop = 80
+          ExplicitWidth = 185
+          ExplicitHeight = 41
           object ImageProduto: TImage
             Left = 120
             Top = 10
@@ -583,8 +576,6 @@ object frmPrincipal: TfrmPrincipal
         Padding.Right = 5
         Padding.Bottom = 5
         TabOrder = 1
-        ExplicitWidth = 815
-        ExplicitHeight = 558
         object DBGrid1: TDBGrid
           Left = 5
           Top = 5
@@ -609,8 +600,6 @@ object frmPrincipal: TfrmPrincipal
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitTop = 618
-      ExplicitWidth = 1215
       object pnlButtons: TPanel
         Left = 0
         Top = 0
@@ -624,7 +613,6 @@ object frmPrincipal: TfrmPrincipal
         Padding.Right = 5
         Padding.Bottom = 10
         TabOrder = 0
-        ExplicitWidth = 1215
         object pnlCancelarOperacao: TPanel
           Left = 25
           Top = 10

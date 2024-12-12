@@ -1,11 +1,8 @@
 // Deus é perfeito sempre e sempre será!!
 
-{ Dicas/Ensinamentos:
+{
 
 desaclopamento = Tirar a necessidade de uses de uma terminada unit.
-panel = div do html e css
-
-
 }
 
 unit acpdv.view.principal;
@@ -18,7 +15,7 @@ uses
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Imaging.jpeg;
 
 type
-  TfrmPrincipal = class(TForm)
+  TForm1 = class(TForm)
     pnlContainer: TPanel;
     pnlTittle: TPanel;
     pnlButtons: TPanel;
@@ -82,7 +79,7 @@ type
   end;
 
 var
-  frmPrincipal: TfrmPrincipal;
+  Form1: TForm1;
 
 implementation
 

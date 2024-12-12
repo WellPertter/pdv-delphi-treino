@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Data.DB,
-  Vcl.Grids, Vcl.DBGrids;
+  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Imaging.jpeg;
 
 type
   TForm1 = class(TForm)
@@ -38,6 +38,33 @@ type
     btnCancelarItem: TSpeedButton;
     pnlButtom: TPanel;
     DBGrid1: TDBGrid;
+    pnlTotalCompra: TPanel;
+    Label1: TLabel;
+    Shape8: TShape;
+    pnlEdtTotalCompra: TPanel;
+    lbTotalCompra: TLabel;
+    pnlQuantidade: TPanel;
+    Label2: TLabel;
+    Panel2: TPanel;
+    Shape9: TShape;
+    pnlSubTotal: TPanel;
+    Label4: TLabel;
+    Panel4: TPanel;
+    Shape10: TShape;
+    Label5: TLabel;
+    edtQuantidade: TEdit;
+    pnlPreco: TPanel;
+    p: TLabel;
+    Panel5: TPanel;
+    Shape11: TShape;
+    lblPreco: TLabel;
+    pnlProduto: TPanel;
+    Label3: TLabel;
+    Panel3: TPanel;
+    Shape12: TShape;
+    edtProduto: TEdit;
+    pnlImage: TPanel;
+    ImageProduto: TImage;
   private
     { Private declarations }
   public
