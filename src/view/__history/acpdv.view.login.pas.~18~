@@ -7,7 +7,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
-  Vcl.Imaging.jpeg, acpdv.view.component.transparence;
+  Vcl.Imaging.jpeg;
 
 type
   TformLogin = class(TForm)
@@ -30,10 +30,8 @@ type
     btnLoga: TSpeedButton;
     procedure btnLogaClick(Sender: TObject);
     procedure edtPasswordKeyPress(Sender: TObject; var Key: Char);
-    procedure FormCreate(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
-    Ffundo : TformTransparence;
+    { Private declarations }
   public
     { Public declarations }
   end;
@@ -47,35 +45,20 @@ implementation
 
 procedure TformLogin.btnLogaClick(Sender: TObject);
 begin
- { if not ((edtUsuario.text = 'GODISPERFECT') and
+  if not ((edtUsuario.text = 'GODISPERFECT') and
    (edtPassword.Text = '123')) then
   begin
     ShowMessage('Login e senha inválido!');
     abort;
-  end;   }
+  end;
   Close;
 end;
 
 procedure TformLogin.edtPasswordKeyPress(Sender: TObject; var Key: Char);
 begin
-  if key = #13 then
-  begin
+  if key = '#13' then
     btnLogaClick(nil);
-    Key := #0;
-  end;
 
-end;
-
-procedure TformLogin.FormClose(Sender: TObject; var Action: TCloseAction);
-begin
-  Ffundo.free;
-end;
-
-procedure TformLogin.FormCreate(Sender: TObject);
-begin
-  Ffundo := TformTransparence.Create(nil);
-  Ffundo.Parent := pnlImage;
-  Ffundo.show;
 end;
 
 end.

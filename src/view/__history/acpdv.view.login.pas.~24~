@@ -31,10 +31,10 @@ type
     procedure btnLogaClick(Sender: TObject);
     procedure edtPasswordKeyPress(Sender: TObject; var Key: Char);
     procedure FormCreate(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     Ffundo : TformTransparence;
   public
+    destructor destroy; override;
     { Public declarations }
   end;
 
@@ -47,13 +47,19 @@ implementation
 
 procedure TformLogin.btnLogaClick(Sender: TObject);
 begin
- { if not ((edtUsuario.text = 'GODISPERFECT') and
+  if not ((edtUsuario.text = 'GODISPERFECT') and
    (edtPassword.Text = '123')) then
   begin
     ShowMessage('Login e senha inválido!');
     abort;
-  end;   }
+  end;
   Close;
+end;
+
+destructor TformLogin.destroy;
+begin
+
+  inherited;
 end;
 
 procedure TformLogin.edtPasswordKeyPress(Sender: TObject; var Key: Char);
@@ -64,11 +70,6 @@ begin
     Key := #0;
   end;
 
-end;
-
-procedure TformLogin.FormClose(Sender: TObject; var Action: TCloseAction);
-begin
-  Ffundo.free;
 end;
 
 procedure TformLogin.FormCreate(Sender: TObject);

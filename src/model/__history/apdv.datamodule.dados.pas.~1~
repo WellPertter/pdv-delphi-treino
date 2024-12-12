@@ -1,0 +1,25 @@
+unit apdv.datamodule.dados;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  TDMdados = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DMdados: TDMdados;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

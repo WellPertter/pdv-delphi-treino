@@ -5,8 +5,6 @@
   desaclopamento = Tirar a necessidade de uses de uma terminada unit.
   panel = div do html e css
 
-  Dicas :
-  bõtão direito - refactor - extratc method
 
 }
 
@@ -43,6 +41,9 @@ type
     pnlConsultarPreco: TPanel;
     Shape7: TShape;
     btnConsultarPreco: TSpeedButton;
+    pnlDevolucao: TPanel;
+    Shape1: TShape;
+    btnDevolucao: TSpeedButton;
     pnlCancelarItem: TPanel;
     Shape6: TShape;
     btnCancelarItem: TSpeedButton;
@@ -75,10 +76,8 @@ type
     pnlImage: TPanel;
     ImageProduto: TImage;
     pnlMaster: TPanel;
-    DBGrid1: TDBGrid;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     FLogin: TformLogin;
     procedure MontarButtons;
@@ -95,22 +94,15 @@ implementation
 {$R *.dfm}
 
 { TForm1 }
-procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
-begin
-  FLogin.free;
-end;
-
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
   MontarButtons;
+
 end;
 
 procedure TfrmPrincipal.FormShow(Sender: TObject);
 begin
   FLogin := TformLogin.Create(nil);
-  FLogin.Parent := pnlMaster;
-  FLogin.Show;
-  FLogin.edtUsuario.SetFocus;
 end;
 
 procedure TfrmPrincipal.MontarButtons;

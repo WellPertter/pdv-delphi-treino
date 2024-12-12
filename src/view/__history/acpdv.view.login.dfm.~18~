@@ -13,8 +13,6 @@ object formLogin: TformLogin
   Font.Name = 'Segoe UI'
   Font.Style = []
   WindowState = wsMaximized
-  OnClose = FormClose
-  OnCreate = FormCreate
   TextHeight = 15
   object pnlMain: TPanel
     Left = 0

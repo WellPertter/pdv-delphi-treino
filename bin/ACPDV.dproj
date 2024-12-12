@@ -82,7 +82,6 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
-        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <DCC_ExeOutput>C:\Desenvolvimento\ac-pdv\bin\</DCC_ExeOutput>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
@@ -108,8 +107,17 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\src\view\acpdv.view.login.pas">
-            <Form>Form1</Form>
+            <Form>formLogin</Form>
             <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\src\view\component\acpdv.view.component.transparence.pas">
+            <Form>formTransparence</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\src\model\apdv.datamodule.dados.pas">
+            <Form>DMdados</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -132,8 +140,14 @@
                     <Source Name="MainSource">ACPDV.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k270.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp270.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2025.1.1\Trial\LibRS29\VCL\Win32\dclfqbIBX29.bpl">FastQueryBuilder - IBX Engine by Fast Reports Inc</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2025.1.1\Trial\LibRS29\VCL\Win32\dclfrxIBX29.bpl">FastReport VCL - IBX Components by Fast Reports Inc</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2025.1.1\Trial\LibRS29\VCL\Win32\dclfsIBX29.bpl">FastScript VCL - IBX Components by Fast Reports Inc</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2025.1.1\Trial\LibRS29\VCL\Win32\frxIBXQueryBuilder29.bpl">FastReport VCL - FastQueryBuilder - IBX by Fast Reports Inc</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2025.1.1\Trial\LibRS29\FMX\Win32\dclFMXfrxIBX29.bpl">FastReport FMX - IBX Components by Fast Reports Inc</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2025.1.1\Trial\LibRS29\FMX\Win32\dclFMXfsIBX29.bpl">FastScript FMX - IBX Components by Fast Reports Inc</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">

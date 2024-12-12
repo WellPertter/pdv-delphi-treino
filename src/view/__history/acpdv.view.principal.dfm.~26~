@@ -10,7 +10,6 @@ object frmPrincipal: TfrmPrincipal
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  WindowState = wsMaximized
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
@@ -23,8 +22,10 @@ object frmPrincipal: TfrmPrincipal
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = 60
-    ExplicitHeight = 566
+    ExplicitLeft = 256
+    ExplicitTop = 220
+    ExplicitWidth = 185
+    ExplicitHeight = 41
     object pnlContainer: TPanel
       Left = 0
       Top = 0
@@ -33,6 +34,7 @@ object frmPrincipal: TfrmPrincipal
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 0
+      ExplicitWidth = 1217
       object pnlTittle: TPanel
         Left = 0
         Top = 0
@@ -50,6 +52,7 @@ object frmPrincipal: TfrmPrincipal
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
+        ExplicitWidth = 1217
       end
       object pnlMain: TPanel
         Left = 0
@@ -59,6 +62,7 @@ object frmPrincipal: TfrmPrincipal
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
+        ExplicitWidth = 1217
         object pnlOperacoes: TPanel
           Left = 872
           Top = 0
@@ -70,6 +74,7 @@ object frmPrincipal: TfrmPrincipal
           Padding.Right = 15
           Padding.Bottom = 20
           TabOrder = 0
+          ExplicitLeft = 817
           object pnlTotalCompra: TPanel
             Left = 5
             Top = 476
@@ -578,137 +583,12 @@ object frmPrincipal: TfrmPrincipal
           Height = 566
           Align = alClient
           BevelOuter = bvNone
-          Color = clWhite
           Padding.Left = 5
           Padding.Top = 5
           Padding.Right = 5
           Padding.Bottom = 5
-          ParentBackground = False
           TabOrder = 1
-          object DBGrid1: TDBGrid
-            Left = 5
-            Top = 5
-            Width = 862
-            Height = 556
-            Align = alClient
-            Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgThumbTracking]
-            TabOrder = 0
-            TitleFont.Charset = DEFAULT_CHARSET
-            TitleFont.Color = clWindowText
-            TitleFont.Height = -11
-            TitleFont.Name = 'Tahoma'
-            TitleFont.Style = []
-            Columns = <
-              item
-                Expanded = False
-                FieldName = 'codigo'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                Title.Caption = 'C'#243'digo'
-                Title.Font.Charset = DEFAULT_CHARSET
-                Title.Font.Color = clWindowText
-                Title.Font.Height = -16
-                Title.Font.Name = 'Tahoma'
-                Title.Font.Style = []
-                Width = 97
-                Visible = True
-              end
-              item
-                Alignment = taCenter
-                Expanded = False
-                FieldName = 'item'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                Title.Alignment = taCenter
-                Title.Caption = 'Item'
-                Title.Font.Charset = DEFAULT_CHARSET
-                Title.Font.Color = clWindowText
-                Title.Font.Height = -16
-                Title.Font.Name = 'Tahoma'
-                Title.Font.Style = []
-                Width = 50
-                Visible = True
-              end
-              item
-                Expanded = False
-                FieldName = 'descricao_produto'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                Title.Caption = 'Produto'
-                Title.Font.Charset = DEFAULT_CHARSET
-                Title.Font.Color = clWindowText
-                Title.Font.Height = -16
-                Title.Font.Name = 'Tahoma'
-                Title.Font.Style = []
-                Width = 400
-                Visible = True
-              end
-              item
-                Alignment = taCenter
-                Expanded = False
-                FieldName = 'valor_unt'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                Title.Alignment = taCenter
-                Title.Caption = 'Valor Unit.'
-                Title.Font.Charset = DEFAULT_CHARSET
-                Title.Font.Color = clWindowText
-                Title.Font.Height = -16
-                Title.Font.Name = 'Tahoma'
-                Title.Font.Style = []
-                Width = 97
-                Visible = True
-              end
-              item
-                Alignment = taCenter
-                Expanded = False
-                FieldName = 'Quantidade'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                Title.Alignment = taCenter
-                Title.Font.Charset = DEFAULT_CHARSET
-                Title.Font.Color = clWindowText
-                Title.Font.Height = -16
-                Title.Font.Name = 'Tahoma'
-                Title.Font.Style = []
-                Width = 97
-                Visible = True
-              end
-              item
-                Alignment = taCenter
-                Expanded = False
-                FieldName = 'valor_total'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                Title.Alignment = taCenter
-                Title.Caption = 'Valor Total'
-                Title.Font.Charset = DEFAULT_CHARSET
-                Title.Font.Color = clWindowText
-                Title.Font.Height = -16
-                Title.Font.Name = 'Tahoma'
-                Title.Font.Style = []
-                Width = 97
-                Visible = True
-              end>
-          end
+          ExplicitWidth = 817
         end
       end
       object pnlButtom: TPanel
@@ -719,6 +599,7 @@ object frmPrincipal: TfrmPrincipal
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
+        ExplicitWidth = 1217
         object pnlButtons: TPanel
           Left = 0
           Top = 0
@@ -732,6 +613,7 @@ object frmPrincipal: TfrmPrincipal
           Padding.Right = 5
           Padding.Bottom = 10
           TabOrder = 0
+          ExplicitWidth = 1217
           object pnlCancelarOperacao: TPanel
             Left = 25
             Top = 10
@@ -811,7 +693,7 @@ object frmPrincipal: TfrmPrincipal
             end
           end
           object pnlMenuFuncoes: TPanel
-            Left = 950
+            Left = 1135
             Top = 10
             Width = 185
             Height = 80
@@ -821,7 +703,6 @@ object frmPrincipal: TfrmPrincipal
             Align = alLeft
             BevelOuter = bvNone
             TabOrder = 2
-            ExplicitLeft = 1135
             object Shape4: TShape
               Left = 0
               Top = 0
@@ -928,6 +809,44 @@ object frmPrincipal: TfrmPrincipal
               ExplicitHeight = 22
             end
           end
+          object pnlDevolucao: TPanel
+            Left = 950
+            Top = 10
+            Width = 185
+            Height = 80
+            Margins.Left = 0
+            Margins.Top = 0
+            Margins.Bottom = 0
+            Align = alLeft
+            BevelOuter = bvNone
+            TabOrder = 5
+            object Shape1: TShape
+              Left = 0
+              Top = 0
+              Width = 185
+              Height = 80
+              Align = alClient
+              Brush.Color = 14342621
+              Pen.Style = psClear
+              Shape = stRoundRect
+              ExplicitLeft = 64
+              ExplicitTop = 8
+              ExplicitWidth = 65
+              ExplicitHeight = 65
+            end
+            object btnDevolucao: TSpeedButton
+              Left = 0
+              Top = 0
+              Width = 185
+              Height = 80
+              Align = alClient
+              Caption = 'Devolu'#231#227'o'
+              Flat = True
+              ExplicitLeft = -3
+              ExplicitTop = 8
+              ExplicitHeight = 78
+            end
+          end
           object pnlCancelarItem: TPanel
             Left = 765
             Top = 10
@@ -938,7 +857,7 @@ object frmPrincipal: TfrmPrincipal
             Margins.Bottom = 0
             Align = alLeft
             BevelOuter = bvNone
-            TabOrder = 5
+            TabOrder = 6
             object Shape6: TShape
               Left = 0
               Top = 0
