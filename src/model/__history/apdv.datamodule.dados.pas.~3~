@@ -1,0 +1,31 @@
+unit apdv.datamodule.dados;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Datasnap.DBClient;
+
+type
+  TDMdados = class(TDataModule)
+    ClientDataSet1: TClientDataSet;
+    ClientDataSet1Codigo: TStringField;
+    ClientDataSet1item: TStringField;
+    ClientDataSet1Descricao: TStringField;
+    ClientDataSet1valor_unt: TCurrencyField;
+    ClientDataSet1quantidade: TCurrencyField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DMdados: TDMdados;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

@@ -1,43 +1,51 @@
 object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
+  BorderStyle = bsSingle
   Caption = 'ACADEMIA DO C'#211'DIGO - PDV'
   ClientHeight = 726
-  ClientWidth = 1272
+  ClientWidth = 1366
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  KeyPreview = True
+  Position = poMainFormCenter
   WindowState = wsMaximized
+  OnClose = FormClose
   OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
   TextHeight = 13
   object pnlMaster: TPanel
     Left = 0
     Top = 0
-    Width = 1272
+    Width = 1366
     Height = 726
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitLeft = 256
-    ExplicitTop = 220
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 1364
+    ExplicitHeight = 718
     object pnlContainer: TPanel
       Left = 0
       Top = 0
-      Width = 1272
+      Width = 1366
       Height = 726
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitWidth = 1217
+      ExplicitWidth = 1364
+      ExplicitHeight = 718
+      DesignSize = (
+        1366
+        726)
       object pnlTittle: TPanel
         Left = 0
         Top = 0
-        Width = 1272
+        Width = 1366
         Height = 60
         Align = alTop
         BevelOuter = bvNone
@@ -51,19 +59,20 @@ object frmPrincipal: TfrmPrincipal
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1217
+        ExplicitWidth = 1364
       end
       object pnlMain: TPanel
         Left = 0
         Top = 60
-        Width = 1272
+        Width = 1366
         Height = 566
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitWidth = 1217
+        ExplicitWidth = 1364
+        ExplicitHeight = 558
         object pnlOperacoes: TPanel
-          Left = 872
+          Left = 966
           Top = 0
           Width = 400
           Height = 566
@@ -73,7 +82,8 @@ object frmPrincipal: TfrmPrincipal
           Padding.Right = 15
           Padding.Bottom = 20
           TabOrder = 0
-          ExplicitLeft = 817
+          ExplicitLeft = 964
+          ExplicitHeight = 558
           object pnlTotalCompra: TPanel
             Left = 5
             Top = 476
@@ -82,6 +92,7 @@ object frmPrincipal: TfrmPrincipal
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 0
+            ExplicitTop = 468
             object Label1: TLabel
               Left = 0
               Top = 0
@@ -156,6 +167,7 @@ object frmPrincipal: TfrmPrincipal
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 1
+            ExplicitTop = 328
             object Label2: TLabel
               Left = 0
               Top = 0
@@ -234,6 +246,7 @@ object frmPrincipal: TfrmPrincipal
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 2
+            ExplicitTop = 398
             object Label4: TLabel
               Left = 0
               Top = 0
@@ -308,6 +321,7 @@ object frmPrincipal: TfrmPrincipal
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 3
+            ExplicitTop = 258
             object p: TLabel
               Left = 0
               Top = 0
@@ -382,6 +396,7 @@ object frmPrincipal: TfrmPrincipal
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 4
+            ExplicitTop = 188
             object Label3: TLabel
               Left = 0
               Top = 0
@@ -464,6 +479,7 @@ object frmPrincipal: TfrmPrincipal
             Padding.Right = 120
             Padding.Bottom = 10
             TabOrder = 5
+            ExplicitHeight = 188
             object ImageProduto: TImage
               Left = 120
               Top = 10
@@ -578,31 +594,161 @@ object frmPrincipal: TfrmPrincipal
         object pnlGrid: TPanel
           Left = 0
           Top = 0
-          Width = 872
+          Width = 966
           Height = 566
           Align = alClient
           BevelOuter = bvNone
+          Color = clWhite
           Padding.Left = 5
           Padding.Top = 5
           Padding.Right = 5
           Padding.Bottom = 5
+          ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 817
+          ExplicitWidth = 964
+          ExplicitHeight = 558
+          object gridItens: TDBGrid
+            Left = 5
+            Top = 5
+            Width = 956
+            Height = 556
+            Align = alClient
+            BorderStyle = bsNone
+            DataSource = dsItens
+            Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'Codigo'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -13
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Title.Caption = 'C'#243'digo'
+                Title.Font.Charset = DEFAULT_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Tahoma'
+                Title.Font.Style = []
+                Width = 97
+                Visible = True
+              end
+              item
+                Alignment = taCenter
+                Expanded = False
+                FieldName = 'item'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -13
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Title.Alignment = taCenter
+                Title.Caption = 'Item'
+                Title.Font.Charset = DEFAULT_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Tahoma'
+                Title.Font.Style = []
+                Width = 50
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Descricao'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -13
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Title.Caption = 'Produto'
+                Title.Font.Charset = DEFAULT_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Tahoma'
+                Title.Font.Style = []
+                Width = 400
+                Visible = True
+              end
+              item
+                Alignment = taCenter
+                Expanded = False
+                FieldName = 'valor_unt'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -13
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Title.Alignment = taCenter
+                Title.Caption = 'Valor Unit.'
+                Title.Font.Charset = DEFAULT_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Tahoma'
+                Title.Font.Style = []
+                Width = 97
+                Visible = True
+              end
+              item
+                Alignment = taCenter
+                Expanded = False
+                FieldName = 'quantidade'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -13
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Title.Alignment = taCenter
+                Title.Font.Charset = DEFAULT_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Tahoma'
+                Title.Font.Style = []
+                Width = 97
+                Visible = True
+              end
+              item
+                Alignment = taCenter
+                Expanded = False
+                FieldName = 'sup_total'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -13
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Title.Alignment = taCenter
+                Title.Caption = 'Valor Total'
+                Title.Font.Charset = DEFAULT_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Tahoma'
+                Title.Font.Style = []
+                Width = 97
+                Visible = True
+              end>
+          end
         end
       end
       object pnlButtom: TPanel
         Left = 0
         Top = 626
-        Width = 1272
+        Width = 1366
         Height = 100
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitWidth = 1217
+        ExplicitTop = 618
+        ExplicitWidth = 1364
         object pnlButtons: TPanel
           Left = 0
           Top = 0
-          Width = 1272
+          Width = 1366
           Height = 100
           Align = alClient
           Alignment = taLeftJustify
@@ -612,7 +758,7 @@ object frmPrincipal: TfrmPrincipal
           Padding.Right = 5
           Padding.Bottom = 10
           TabOrder = 0
-          ExplicitWidth = 1217
+          ExplicitWidth = 1364
           object pnlCancelarOperacao: TPanel
             Left = 25
             Top = 10
@@ -692,7 +838,7 @@ object frmPrincipal: TfrmPrincipal
             end
           end
           object pnlMenuFuncoes: TPanel
-            Left = 1135
+            Left = 950
             Top = 10
             Width = 185
             Height = 80
@@ -808,44 +954,6 @@ object frmPrincipal: TfrmPrincipal
               ExplicitHeight = 22
             end
           end
-          object pnlDevolucao: TPanel
-            Left = 950
-            Top = 10
-            Width = 185
-            Height = 80
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Bottom = 0
-            Align = alLeft
-            BevelOuter = bvNone
-            TabOrder = 5
-            object Shape1: TShape
-              Left = 0
-              Top = 0
-              Width = 185
-              Height = 80
-              Align = alClient
-              Brush.Color = 14342621
-              Pen.Style = psClear
-              Shape = stRoundRect
-              ExplicitLeft = 64
-              ExplicitTop = 8
-              ExplicitWidth = 65
-              ExplicitHeight = 65
-            end
-            object btnDevolucao: TSpeedButton
-              Left = 0
-              Top = 0
-              Width = 185
-              Height = 80
-              Align = alClient
-              Caption = 'Devolu'#231#227'o'
-              Flat = True
-              ExplicitLeft = -3
-              ExplicitTop = 8
-              ExplicitHeight = 78
-            end
-          end
           object pnlCancelarItem: TPanel
             Left = 765
             Top = 10
@@ -856,7 +964,7 @@ object frmPrincipal: TfrmPrincipal
             Margins.Bottom = 0
             Align = alLeft
             BevelOuter = bvNone
-            TabOrder = 6
+            TabOrder = 5
             object Shape6: TShape
               Left = 0
               Top = 0
@@ -887,6 +995,34 @@ object frmPrincipal: TfrmPrincipal
           end
         end
       end
+      object splitViewFuncoes: TSplitView
+        Left = 1166
+        Top = 60
+        Width = 200
+        Height = 566
+        DisplayMode = svmOverlay
+        OpenedWidth = 200
+        Placement = svpRight
+        TabOrder = 3
+        object pnlMainSplitView: TPanel
+          Left = 0
+          Top = 0
+          Width = 200
+          Height = 566
+          Align = alClient
+          BevelOuter = bvNone
+          TabOrder = 0
+          ExplicitLeft = 88
+          ExplicitTop = 272
+          ExplicitWidth = 185
+          ExplicitHeight = 41
+        end
+      end
     end
+  end
+  object dsItens: TDataSource
+    DataSet = DMdados.cdsItens
+    Left = 48
+    Top = 148
   end
 end

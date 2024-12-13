@@ -1,0 +1,31 @@
+object DMdados: TDMdados
+  Height = 481
+  Width = 653
+  PixelsPerInch = 120
+  object ClientDataSet1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 33
+    Top = 25
+    object ClientDataSet1Codigo: TStringField
+      FieldName = 'Codigo'
+      Size = 50
+    end
+    object ClientDataSet1item: TStringField
+      FieldName = 'item'
+      Size = 50
+    end
+    object ClientDataSet1Descricao: TStringField
+      FieldName = 'Descricao'
+      Size = 450
+    end
+    object ClientDataSet1valor_unt: TCurrencyField
+      FieldName = 'valor_unt'
+      EditFormat = 'R$ #.##0,00'
+    end
+    object ClientDataSet1quantidade: TCurrencyField
+      FieldName = 'quantidade'
+      EditFormat = '0.000'
+    end
+  end
+end

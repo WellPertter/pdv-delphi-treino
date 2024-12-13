@@ -24,6 +24,8 @@ object formLogin: TformLogin
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitWidth = 1102
+    ExplicitHeight = 747
     object pnlLogin: TPanel
       Left = 720
       Top = 0
@@ -38,6 +40,8 @@ object formLogin: TformLogin
       Padding.Bottom = 150
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 702
+      ExplicitHeight = 747
       object pnllogar: TPanel
         Left = 60
         Top = 150
@@ -48,6 +52,7 @@ object formLogin: TformLogin
         Color = clWhite
         ParentBackground = False
         TabOrder = 0
+        ExplicitHeight = 447
         object pnlTop: TPanel
           Left = 0
           Top = 0
@@ -127,7 +132,8 @@ object formLogin: TformLogin
             Font.Style = []
             ParentFont = False
             TabOrder = 0
-            OnKeyPress = edtPasswordKeyPress
+            ExplicitTop = 25
+            ExplicitHeight = 26
           end
         end
         object pnltop3: TPanel
@@ -192,6 +198,8 @@ object formLogin: TformLogin
             PasswordChar = '*'
             TabOrder = 0
             OnKeyPress = edtPasswordKeyPress
+            ExplicitTop = 25
+            ExplicitHeight = 26
           end
         end
         object pnlTop4: TPanel
@@ -259,6 +267,8 @@ object formLogin: TformLogin
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 702
+      ExplicitHeight = 747
       object image: TImage
         Left = 0
         Top = 0

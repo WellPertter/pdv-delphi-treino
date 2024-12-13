@@ -34,7 +34,7 @@ implementation
 
 procedure TDMdados.cdsItensCalcFields(DataSet: TDataSet);
 begin
-  cdsItenssup_total.AsCurrency :=cdsItensvalor_unt.AsCurrency * cdsItensquantidade.AsCurrency;
+  cdsItenstotal.AsCurrency :=cdsItensvalor_unt.AsCurrency * cdsItensquantidade.AsCurrency;
 end;
 
 procedure TDMdados.DataModuleCreate(Sender: TObject);
@@ -45,7 +45,6 @@ begin
 
   cdsItens.insert;
   cdsItensCodigo.AsString := '1';
-  cdsItensitem.AsString   := '4';
   cdsItensDescricao.AsString := 'item 1';
   cdsItensquantidade.AsFloat := 2;
   cdsItensvalor_unt.AsFloat := 10;

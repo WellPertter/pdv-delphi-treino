@@ -14,7 +14,6 @@ object DMdados: TDMdados
     Active = True
     Aggregates = <>
     Params = <>
-    OnCalcFields = cdsItensCalcFields
     Left = 33
     Top = 25
     object cdsItensCodigo: TStringField

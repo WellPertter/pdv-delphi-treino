@@ -8,6 +8,7 @@
   Dicas :
   bõtão direito - refactor - extratc method
 
+  VK_F1 ( para mencionar as teclas  tem que ter o keypreview) ( começar a usar case)
 }
 
 unit acpdv.view.principal;
@@ -18,7 +19,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Data.DB,
-  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Imaging.jpeg, acpdv.view.login;
+  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Imaging.jpeg, acpdv.view.login,
+  Vcl.WinXCtrls;
 
 type
   TfrmPrincipal = class(TForm)
@@ -43,9 +45,6 @@ type
     pnlConsultarPreco: TPanel;
     Shape7: TShape;
     btnConsultarPreco: TSpeedButton;
-    pnlDevolucao: TPanel;
-    Shape1: TShape;
-    btnDevolucao: TSpeedButton;
     pnlCancelarItem: TPanel;
     Shape6: TShape;
     btnCancelarItem: TSpeedButton;
@@ -78,12 +77,18 @@ type
     pnlImage: TPanel;
     ImageProduto: TImage;
     pnlMaster: TPanel;
+    gridItens: TDBGrid;
+    dsItens: TDataSource;
+    splitViewFuncoes: TSplitView;
+    pnlMainSplitView: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     FLogin: TformLogin;
     procedure MontarButtons;
+    procedure FormFix;
     { Private declarations }
   public
     { Public declarations }
@@ -94,9 +99,36 @@ var
 
 implementation
 
+uses apdv.datamodule.dados;
+
 {$R *.dfm}
 
 { TForm1 }
+procedure TfrmPrincipal.FormFix;
+begin
+  self.WindowState := TWindowState.wsNormal;
+  self.Position := poScreenCenter;
+  self.Constraints.MaxHeight := self.ClientHeight;
+  self.Constraints.MinHeight := self.ClientHeight;
+  self.Constraints.MinWidth := self.ClientWidth;
+  self.Constraints.MaxWidth := self.ClientWidth;
+end;
+
+procedure TfrmPrincipal.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+
+  case key of
+    VK_ESCAPE: ShowMessage('Cancelar operação!');
+    VK_F2: ShowMessage('F2');
+    VK_F4: ShowMessage('F4');
+    VK_F5: ShowMessage('F5');
+    VK_F6: ShowMessage('F6');
+    VK_F12: ShowMessage('F12');
+  end;
+
+end;
+
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   FLogin.free;
@@ -104,6 +136,7 @@ end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
+ //ormFix;
   MontarButtons;
 end;
 
@@ -112,6 +145,7 @@ begin
   FLogin := TformLogin.Create(nil);
   FLogin.Parent := pnlMaster;
   FLogin.Show;
+  FLogin.edtUsuario.SetFocus;
 end;
 
 procedure TfrmPrincipal.MontarButtons;

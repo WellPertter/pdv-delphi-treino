@@ -16,7 +16,6 @@ type
     cdsItenssup_total: TCurrencyField;
     cdsItenstotal: TAggregateField;
     procedure DataModuleCreate(Sender: TObject);
-    procedure cdsItensCalcFields(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -32,11 +31,6 @@ implementation
 
 {$R *.dfm}
 
-procedure TDMdados.cdsItensCalcFields(DataSet: TDataSet);
-begin
-  cdsItenssup_total.AsCurrency :=cdsItensvalor_unt.AsCurrency * cdsItensquantidade.AsCurrency;
-end;
-
 procedure TDMdados.DataModuleCreate(Sender: TObject);
 begin
   cdsItens.close;
@@ -45,15 +39,14 @@ begin
 
   cdsItens.insert;
   cdsItensCodigo.AsString := '1';
-  cdsItensitem.AsString   := '4';
-  cdsItensDescricao.AsString := 'item 1';
+  cdsItensDescricao.AsString := 'item 2';
   cdsItensquantidade.AsFloat := 2;
   cdsItensvalor_unt.AsFloat := 10;
   cdsItens.Post;
 
 
   cdsItens.insert;
-  cdsItensCodigo.AsString := '2';
+  cdsItensCodigo.AsString := '1';
   cdsItensDescricao.AsString := 'item 2';
   cdsItensquantidade.AsFloat := 2;
   cdsItensvalor_unt.AsFloat := 10;
