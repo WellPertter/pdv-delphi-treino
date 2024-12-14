@@ -14,9 +14,9 @@ begin
   Application.Initialize;
   ReportMemoryLeaksOnShutdown := true;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TformFinalizarVenda, formFinalizarVenda);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TformTransparence, formTransparence);
   Application.CreateForm(TDMdados, DMdados);
+  Application.CreateForm(TformFinalizarVenda, formFinalizarVenda);
   Application.Run;
 end.

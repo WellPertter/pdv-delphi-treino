@@ -1,44 +1,51 @@
 object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
+  BorderStyle = bsSingle
   Caption = 'ACADEMIA DO C'#211'DIGO - PDV'
   ClientHeight = 726
-  ClientWidth = 1272
+  ClientWidth = 1366
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  KeyPreview = True
+  Position = poMainFormCenter
   WindowState = wsMaximized
   OnClose = FormClose
   OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   TextHeight = 13
   object pnlMaster: TPanel
     Left = 0
     Top = 0
-    Width = 1272
+    Width = 1366
     Height = 726
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 1270
+    ExplicitWidth = 1364
     ExplicitHeight = 718
     object pnlContainer: TPanel
       Left = 0
       Top = 0
-      Width = 1272
+      Width = 1366
       Height = 726
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitWidth = 1270
+      ExplicitWidth = 1364
       ExplicitHeight = 718
+      DesignSize = (
+        1366
+        726)
       object pnlTittle: TPanel
         Left = 0
         Top = 0
-        Width = 1272
+        Width = 1366
         Height = 60
         Align = alTop
         BevelOuter = bvNone
@@ -52,20 +59,20 @@ object frmPrincipal: TfrmPrincipal
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1270
+        ExplicitWidth = 1364
       end
       object pnlMain: TPanel
         Left = 0
         Top = 60
-        Width = 1272
+        Width = 1366
         Height = 566
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitWidth = 1270
+        ExplicitWidth = 1364
         ExplicitHeight = 558
         object pnlOperacoes: TPanel
-          Left = 872
+          Left = 966
           Top = 0
           Width = 400
           Height = 566
@@ -75,7 +82,7 @@ object frmPrincipal: TfrmPrincipal
           Padding.Right = 15
           Padding.Bottom = 20
           TabOrder = 0
-          ExplicitLeft = 870
+          ExplicitLeft = 964
           ExplicitHeight = 558
           object pnlTotalCompra: TPanel
             Left = 5
@@ -587,7 +594,7 @@ object frmPrincipal: TfrmPrincipal
         object pnlGrid: TPanel
           Left = 0
           Top = 0
-          Width = 872
+          Width = 966
           Height = 566
           Align = alClient
           BevelOuter = bvNone
@@ -598,17 +605,17 @@ object frmPrincipal: TfrmPrincipal
           Padding.Bottom = 5
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 870
+          ExplicitWidth = 964
           ExplicitHeight = 558
           object gridItens: TDBGrid
             Left = 5
             Top = 5
-            Width = 862
+            Width = 956
             Height = 556
             Align = alClient
             BorderStyle = bsNone
             DataSource = dsItens
-            Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgThumbTracking]
+            Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
             TabOrder = 0
             TitleFont.Charset = DEFAULT_CHARSET
             TitleFont.Color = clWindowText
@@ -731,17 +738,17 @@ object frmPrincipal: TfrmPrincipal
       object pnlButtom: TPanel
         Left = 0
         Top = 626
-        Width = 1272
+        Width = 1366
         Height = 100
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
         ExplicitTop = 618
-        ExplicitWidth = 1270
+        ExplicitWidth = 1364
         object pnlButtons: TPanel
           Left = 0
           Top = 0
-          Width = 1272
+          Width = 1366
           Height = 100
           Align = alClient
           Alignment = taLeftJustify
@@ -751,7 +758,7 @@ object frmPrincipal: TfrmPrincipal
           Padding.Right = 5
           Padding.Bottom = 10
           TabOrder = 0
-          ExplicitWidth = 1270
+          ExplicitWidth = 1364
           object pnlCancelarOperacao: TPanel
             Left = 25
             Top = 10
@@ -863,6 +870,7 @@ object frmPrincipal: TfrmPrincipal
               Align = alClient
               Caption = 'Menu Fun'#231#245'es'
               Flat = True
+              OnClick = btnMenuFuncoesClick
               ExplicitLeft = 80
               ExplicitTop = 32
               ExplicitWidth = 23
@@ -984,6 +992,210 @@ object frmPrincipal: TfrmPrincipal
               ExplicitTop = 32
               ExplicitWidth = 23
               ExplicitHeight = 22
+            end
+          end
+        end
+      end
+      object splitViewFuncoes: TSplitView
+        Left = 1366
+        Top = 66
+        Width = 0
+        Height = 560
+        Margins.Left = 0
+        Margins.Top = 0
+        Margins.Right = 0
+        Margins.Bottom = 0
+        AnimationDelay = 7
+        DisplayMode = svmOverlay
+        Opened = False
+        OpenedWidth = 275
+        Placement = svpRight
+        TabOrder = 3
+        object pnlMainSplitView: TPanel
+          Left = 0
+          Top = 0
+          Width = 0
+          Height = 560
+          Align = alClient
+          BevelOuter = bvNone
+          Color = 14342621
+          ParentBackground = False
+          TabOrder = 0
+          ExplicitLeft = -112
+          ExplicitTop = -6
+          ExplicitWidth = 182
+          ExplicitHeight = 566
+          object pnlSuprimentoSangria: TPanel
+            Left = 0
+            Top = 285
+            Width = 0
+            Height = 57
+            Align = alTop
+            BevelOuter = bvNone
+            Caption = 'Suprimento/Sangria (Ctrl+F4)'
+            Color = 14342621
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 0
+            ExplicitWidth = 200
+            object Shape1: TShape
+              Left = 0
+              Top = 55
+              Width = 0
+              Height = 2
+              Align = alBottom
+              ExplicitTop = -8
+              ExplicitWidth = 200
+            end
+          end
+          object pnlMultiplicar: TPanel
+            Left = 0
+            Top = 171
+            Width = 0
+            Height = 57
+            Align = alTop
+            BevelOuter = bvNone
+            Caption = 'Multiplicar (*)'
+            Color = 14342621
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 1
+            ExplicitTop = 8
+            ExplicitWidth = 200
+            object Shape13: TShape
+              Left = 0
+              Top = 55
+              Width = 0
+              Height = 2
+              Align = alBottom
+              ExplicitTop = -8
+              ExplicitWidth = 200
+            end
+          end
+          object pnlFecharVenda: TPanel
+            Left = 0
+            Top = 114
+            Width = 0
+            Height = 57
+            Align = alTop
+            BevelOuter = bvNone
+            Caption = 'Fechar Venda (F7)'
+            Color = 14342621
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 2
+            ExplicitTop = 8
+            ExplicitWidth = 200
+            object Shape14: TShape
+              Left = 0
+              Top = 55
+              Width = 0
+              Height = 2
+              Align = alBottom
+              ExplicitTop = -8
+              ExplicitWidth = 200
+            end
+          end
+          object pnlNovaVenda: TPanel
+            Left = 0
+            Top = 57
+            Width = 0
+            Height = 57
+            Align = alTop
+            BevelOuter = bvNone
+            Caption = 'Nova Venda (F3)'
+            Color = 14342621
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 3
+            ExplicitTop = 8
+            ExplicitWidth = 200
+            object Shape15: TShape
+              Left = 0
+              Top = 55
+              Width = 0
+              Height = 2
+              Align = alBottom
+              ExplicitTop = -8
+              ExplicitWidth = 200
+            end
+          end
+          object pnlCPF: TPanel
+            Left = 0
+            Top = 0
+            Width = 0
+            Height = 57
+            Align = alTop
+            BevelOuter = bvNone
+            Caption = 'Informar CPF (F9)'
+            Color = 14342621
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 4
+            ExplicitTop = 8
+            ExplicitWidth = 200
+            object Shape16: TShape
+              Left = 0
+              Top = 55
+              Width = 0
+              Height = 2
+              Align = alBottom
+              ExplicitTop = -8
+              ExplicitWidth = 200
+            end
+          end
+          object pnlDescontoItem: TPanel
+            Left = 0
+            Top = 228
+            Width = 0
+            Height = 57
+            Align = alTop
+            BevelOuter = bvNone
+            Caption = 'DEsconto Item (F11)'
+            Color = 14342621
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 5
+            ExplicitTop = 0
+            ExplicitWidth = 200
+            object Shape17: TShape
+              Left = 0
+              Top = 55
+              Width = 0
+              Height = 2
+              Align = alBottom
+              ExplicitTop = -8
+              ExplicitWidth = 200
             end
           end
         end

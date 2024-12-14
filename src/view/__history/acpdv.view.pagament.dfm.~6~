@@ -97,7 +97,6 @@ object formFinalizarVenda: TformFinalizarVenda
           ParentBackground = False
           ParentFont = False
           TabOrder = 0
-          ExplicitTop = 21
           object pnlOne: TPanel
             Left = 0
             Top = 0
@@ -114,6 +113,18 @@ object formFinalizarVenda: TformFinalizarVenda
             ParentBackground = False
             ParentFont = False
             TabOrder = 0
+            object btnEdit: TSpeedButton
+              Left = 25
+              Top = 0
+              Width = 208
+              Height = 25
+              Align = alClient
+              OnClick = btnEditClick
+              ExplicitLeft = 32
+              ExplicitTop = 8
+              ExplicitWidth = 23
+              ExplicitHeight = 22
+            end
             object Image1: TImage
               Left = 0
               Top = 0
@@ -1929,12 +1940,14 @@ object formFinalizarVenda: TformFinalizarVenda
               ExplicitLeft = 72
               ExplicitTop = -1
             end
-            object Label4: TLabel
+            object Panel2: TPanel
               Left = 25
               Top = 0
               Width = 208
               Height = 25
               Align = alClient
+              Alignment = taLeftJustify
+              BevelOuter = bvNone
               Caption = 'Edit'
               Color = 5589317
               Font.Charset = DEFAULT_CHARSET
@@ -1942,10 +1955,9 @@ object formFinalizarVenda: TformFinalizarVenda
               Font.Height = -16
               Font.Name = 'Segoe UI'
               Font.Style = []
-              ParentColor = False
+              ParentBackground = False
               ParentFont = False
-              ExplicitWidth = 26
-              ExplicitHeight = 21
+              TabOrder = 0
             end
           end
           object pnlTwo: TPanel
@@ -1953,7 +1965,7 @@ object formFinalizarVenda: TformFinalizarVenda
             Left = 0
             Top = 30
             Width = 233
-            Height = 171
+            Height = 115
             Margins.Left = 0
             Margins.Top = 5
             Margins.Right = 0
@@ -1969,185 +1981,53 @@ object formFinalizarVenda: TformFinalizarVenda
             ParentBackground = False
             ParentFont = False
             TabOrder = 1
-            object pnlTotalVenda: TPanel
-              AlignWithMargins = True
+            object Label1: TLabel
               Left = 0
-              Top = 10
+              Top = 42
               Width = 233
-              Height = 25
-              Margins.Left = 0
-              Margins.Top = 10
-              Margins.Right = 0
-              Margins.Bottom = 0
+              Height = 21
               Align = alTop
-              BevelOuter = bvNone
-              Color = 5589317
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWhite
-              Font.Height = -16
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentBackground = False
-              ParentFont = False
-              TabOrder = 0
-              ExplicitTop = 8
-              object Label1: TLabel
-                Left = 0
-                Top = 0
-                Width = 103
-                Height = 25
-                Align = alLeft
-                Caption = 'Total da Venda:'
-                ExplicitHeight = 21
-              end
-              object lblTotalVenda: TLabel
-                Left = 103
-                Top = 0
-                Width = 130
-                Height = 25
-                Align = alClient
-                Alignment = taRightJustify
-                Caption = '0,00'
-                ExplicitLeft = 203
-                ExplicitWidth = 30
-                ExplicitHeight = 21
-              end
+              Caption = 'Label1'
+              ExplicitLeft = 88
+              ExplicitTop = 56
+              ExplicitWidth = 46
             end
-            object pnlDesconto: TPanel
-              AlignWithMargins = True
+            object Label2: TLabel
               Left = 0
-              Top = 35
+              Top = 0
               Width = 233
-              Height = 25
-              Margins.Left = 0
-              Margins.Top = 0
-              Margins.Right = 0
-              Margins.Bottom = 0
+              Height = 21
               Align = alTop
-              BevelOuter = bvNone
-              Color = 5589317
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWhite
-              Font.Height = -16
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentBackground = False
-              ParentFont = False
-              TabOrder = 1
-              ExplicitTop = 8
-              object Label2: TLabel
-                Left = 0
-                Top = 0
-                Width = 120
-                Height = 25
-                Align = alLeft
-                Caption = 'Desconto:             '
-                ExplicitHeight = 21
-              end
-              object edtDesconto: TEdit
-                Left = 120
-                Top = 0
-                Width = 113
-                Height = 25
-                Align = alClient
-                Alignment = taRightJustify
-                BevelInner = bvNone
-                BevelOuter = bvNone
-                BorderStyle = bsNone
-                Color = 5589317
-                TabOrder = 0
-                Text = '0,00'
-              end
+              Caption = 'Label1'
+              ExplicitWidth = 46
             end
-            object pnlAcrescimo: TPanel
-              AlignWithMargins = True
+            object Label3: TLabel
               Left = 0
-              Top = 60
+              Top = 21
               Width = 233
-              Height = 25
-              Margins.Left = 0
-              Margins.Top = 0
-              Margins.Right = 0
-              Margins.Bottom = 0
+              Height = 21
               Align = alTop
-              BevelOuter = bvNone
-              Color = 5589317
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWhite
-              Font.Height = -16
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentBackground = False
-              ParentFont = False
-              TabOrder = 2
-              ExplicitTop = 8
-              object Label3: TLabel
-                Left = 0
-                Top = 0
-                Width = 123
-                Height = 25
-                Align = alLeft
-                Caption = 'Acr'#233'scimo:            '
-                ExplicitHeight = 21
-              end
-              object edtAcrescimo: TEdit
-                Left = 123
-                Top = 0
-                Width = 110
-                Height = 25
-                Align = alClient
-                Alignment = taRightJustify
-                BevelInner = bvNone
-                BevelOuter = bvNone
-                BorderStyle = bsNone
-                Color = 5589317
-                TabOrder = 0
-                Text = '0,00'
-              end
+              Caption = 'Label1'
+              ExplicitWidth = 46
             end
-            object Panel1: TPanel
-              Left = 0
-              Top = 85
-              Width = 233
-              Height = 25
-              Margins.Left = 0
-              Margins.Top = 10
-              Margins.Right = 0
-              Margins.Bottom = 0
-              Align = alTop
-              BevelOuter = bvNone
-              Color = 5589317
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWhite
-              Font.Height = -16
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentBackground = False
-              ParentFont = False
-              TabOrder = 3
-              ExplicitTop = 8
-              object Label5: TLabel
-                Left = 0
-                Top = 0
-                Width = 107
-                Height = 25
-                Align = alLeft
-                Caption = 'Total a Receber:'
-                ExplicitHeight = 21
-              end
-              object lbTotalReceber: TLabel
-                Left = 107
-                Top = 0
-                Width = 126
-                Height = 25
-                Align = alClient
-                Alignment = taRightJustify
-                Caption = '0,00'
-                ExplicitLeft = 203
-                ExplicitWidth = 30
-                ExplicitHeight = 21
-              end
-            end
+          end
+          object Panel1: TPanel
+            Left = 0
+            Top = 288
+            Width = 233
+            Height = 25
+            Align = alBottom
+            BevelOuter = bvNone
+            Color = 5589317
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -16
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 2
+            ExplicitTop = 8
           end
         end
       end

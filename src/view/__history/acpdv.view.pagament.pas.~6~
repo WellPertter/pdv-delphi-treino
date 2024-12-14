@@ -18,20 +18,13 @@ type
     pnlOne: TPanel;
     pnlButton: TPanel;
     pnlTwo: TPanel;
-    Image1: TImage;
-    Label4: TLabel;
-    pnlTotalVenda: TPanel;
     Label1: TLabel;
-    lblTotalVenda: TLabel;
-    pnlDesconto: TPanel;
     Label2: TLabel;
-    edtDesconto: TEdit;
-    pnlAcrescimo: TPanel;
     Label3: TLabel;
-    edtAcrescimo: TEdit;
     Panel1: TPanel;
-    Label5: TLabel;
-    lbTotalReceber: TLabel;
+    btnEdit: TSpeedButton;
+    Image1: TImage;
+    Panel2: TPanel;
     procedure btnEditClick(Sender: TObject);
   private
     { Private declarations }

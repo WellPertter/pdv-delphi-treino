@@ -18,21 +18,13 @@ type
     pnlOne: TPanel;
     pnlButton: TPanel;
     pnlTwo: TPanel;
-    Image1: TImage;
-    Label4: TLabel;
-    pnlTotalVenda: TPanel;
     Label1: TLabel;
-    lblTotalVenda: TLabel;
-    pnlDesconto: TPanel;
     Label2: TLabel;
-    edtDesconto: TEdit;
-    pnlAcrescimo: TPanel;
     Label3: TLabel;
-    edtAcrescimo: TEdit;
     Panel1: TPanel;
-    Label5: TLabel;
-    lbTotalReceber: TLabel;
-    procedure btnEditClick(Sender: TObject);
+    SpeedButton1: TSpeedButton;
+    Image1: TImage;
+    Panel2: TPanel;
   private
     { Private declarations }
   public
@@ -45,10 +37,5 @@ var
 implementation
 
 {$R *.dfm}
-
-procedure TformFinalizarVenda.btnEditClick(Sender: TObject);
-begin
-  ShowMessage('oi')
-end;
 
 end.

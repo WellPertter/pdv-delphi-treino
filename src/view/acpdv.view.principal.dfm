@@ -1011,6 +1011,8 @@ object frmPrincipal: TfrmPrincipal
         OpenedWidth = 275
         Placement = svpRight
         TabOrder = 3
+        ExplicitLeft = 1364
+        ExplicitHeight = 552
         object pnlMainSplitView: TPanel
           Left = 0
           Top = 0
@@ -1021,10 +1023,7 @@ object frmPrincipal: TfrmPrincipal
           Color = 14342621
           ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = -112
-          ExplicitTop = -6
-          ExplicitWidth = 182
-          ExplicitHeight = 566
+          ExplicitHeight = 552
           object pnlSuprimentoSangria: TPanel
             Left = 0
             Top = 285
@@ -1042,7 +1041,6 @@ object frmPrincipal: TfrmPrincipal
             ParentBackground = False
             ParentFont = False
             TabOrder = 0
-            ExplicitWidth = 200
             object Shape1: TShape
               Left = 0
               Top = 55
@@ -1070,8 +1068,6 @@ object frmPrincipal: TfrmPrincipal
             ParentBackground = False
             ParentFont = False
             TabOrder = 1
-            ExplicitTop = 8
-            ExplicitWidth = 200
             object Shape13: TShape
               Left = 0
               Top = 55
@@ -1099,8 +1095,6 @@ object frmPrincipal: TfrmPrincipal
             ParentBackground = False
             ParentFont = False
             TabOrder = 2
-            ExplicitTop = 8
-            ExplicitWidth = 200
             object Shape14: TShape
               Left = 0
               Top = 55
@@ -1128,8 +1122,6 @@ object frmPrincipal: TfrmPrincipal
             ParentBackground = False
             ParentFont = False
             TabOrder = 3
-            ExplicitTop = 8
-            ExplicitWidth = 200
             object Shape15: TShape
               Left = 0
               Top = 55
@@ -1157,8 +1149,6 @@ object frmPrincipal: TfrmPrincipal
             ParentBackground = False
             ParentFont = False
             TabOrder = 4
-            ExplicitTop = 8
-            ExplicitWidth = 200
             object Shape16: TShape
               Left = 0
               Top = 55
@@ -1186,8 +1176,6 @@ object frmPrincipal: TfrmPrincipal
             ParentBackground = False
             ParentFont = False
             TabOrder = 5
-            ExplicitTop = 0
-            ExplicitWidth = 200
             object Shape17: TShape
               Left = 0
               Top = 55
