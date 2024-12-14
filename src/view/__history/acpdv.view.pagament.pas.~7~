@@ -32,22 +32,6 @@ type
     Panel1: TPanel;
     Label5: TLabel;
     lbTotalReceber: TLabel;
-    Shape1: TShape;
-    Panel2: TPanel;
-    Shape2: TShape;
-    pnlRecebido: TPanel;
-    Label6: TLabel;
-    pnlRestante: TPanel;
-    Label8: TLabel;
-    edtSaldoRestante: TEdit;
-    pnlTroco: TPanel;
-    Label9: TLabel;
-    edtTroco: TEdit;
-    edtTotalRecebido: TEdit;
-    pnlAllTop: TPanel;
-    pnlBottomTopLine: TPanel;
-    Shape3: TShape;
-    Panel3: TPanel;
     procedure btnEditClick(Sender: TObject);
   private
     { Private declarations }

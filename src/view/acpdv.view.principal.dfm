@@ -27,8 +27,6 @@ object frmPrincipal: TfrmPrincipal
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 1364
-    ExplicitHeight = 718
     object pnlContainer: TPanel
       Left = 0
       Top = 0
@@ -37,8 +35,6 @@ object frmPrincipal: TfrmPrincipal
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitWidth = 1364
-      ExplicitHeight = 718
       DesignSize = (
         1366
         726)
@@ -59,7 +55,6 @@ object frmPrincipal: TfrmPrincipal
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1364
       end
       object pnlMain: TPanel
         Left = 0
@@ -69,8 +64,6 @@ object frmPrincipal: TfrmPrincipal
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitWidth = 1364
-        ExplicitHeight = 558
         object pnlOperacoes: TPanel
           Left = 966
           Top = 0
@@ -82,8 +75,6 @@ object frmPrincipal: TfrmPrincipal
           Padding.Right = 15
           Padding.Bottom = 20
           TabOrder = 0
-          ExplicitLeft = 964
-          ExplicitHeight = 558
           object pnlTotalCompra: TPanel
             Left = 5
             Top = 476
@@ -92,7 +83,6 @@ object frmPrincipal: TfrmPrincipal
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 0
-            ExplicitTop = 468
             object Label1: TLabel
               Left = 0
               Top = 0
@@ -167,7 +157,6 @@ object frmPrincipal: TfrmPrincipal
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 1
-            ExplicitTop = 328
             object Label2: TLabel
               Left = 0
               Top = 0
@@ -246,7 +235,6 @@ object frmPrincipal: TfrmPrincipal
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 2
-            ExplicitTop = 398
             object Label4: TLabel
               Left = 0
               Top = 0
@@ -321,7 +309,6 @@ object frmPrincipal: TfrmPrincipal
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 3
-            ExplicitTop = 258
             object p: TLabel
               Left = 0
               Top = 0
@@ -396,7 +383,6 @@ object frmPrincipal: TfrmPrincipal
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 4
-            ExplicitTop = 188
             object Label3: TLabel
               Left = 0
               Top = 0
@@ -479,7 +465,6 @@ object frmPrincipal: TfrmPrincipal
             Padding.Right = 120
             Padding.Bottom = 10
             TabOrder = 5
-            ExplicitHeight = 188
             object ImageProduto: TImage
               Left = 120
               Top = 10
@@ -605,8 +590,6 @@ object frmPrincipal: TfrmPrincipal
           Padding.Bottom = 5
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 964
-          ExplicitHeight = 558
           object gridItens: TDBGrid
             Left = 5
             Top = 5
@@ -743,8 +726,6 @@ object frmPrincipal: TfrmPrincipal
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitTop = 618
-        ExplicitWidth = 1364
         object pnlButtons: TPanel
           Left = 0
           Top = 0
@@ -758,7 +739,6 @@ object frmPrincipal: TfrmPrincipal
           Padding.Right = 5
           Padding.Bottom = 10
           TabOrder = 0
-          ExplicitWidth = 1364
           object pnlCancelarOperacao: TPanel
             Left = 25
             Top = 10
@@ -1011,8 +991,6 @@ object frmPrincipal: TfrmPrincipal
         OpenedWidth = 275
         Placement = svpRight
         TabOrder = 3
-        ExplicitLeft = 1364
-        ExplicitHeight = 552
         object pnlMainSplitView: TPanel
           Left = 0
           Top = 0
@@ -1023,7 +1001,6 @@ object frmPrincipal: TfrmPrincipal
           Color = 14342621
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 552
           object pnlSuprimentoSangria: TPanel
             Left = 0
             Top = 285
@@ -1186,6 +1163,28 @@ object frmPrincipal: TfrmPrincipal
               ExplicitWidth = 200
             end
           end
+        end
+      end
+      object splitViewPagament: TSplitView
+        Left = 1366
+        Top = 60
+        Width = 0
+        Height = 617
+        AnimationDelay = 0
+        DisplayMode = svmOverlay
+        Opened = False
+        OpenedWidth = 840
+        Placement = svpRight
+        TabOrder = 5
+        UseAnimation = False
+        object pnlPG: TPanel
+          Left = 0
+          Top = 0
+          Width = 0
+          Height = 617
+          Align = alClient
+          BevelOuter = bvNone
+          TabOrder = 0
         end
       end
     end

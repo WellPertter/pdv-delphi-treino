@@ -93,10 +93,13 @@ type
     Shape16: TShape;
     pnlDescontoItem: TPanel;
     Shape17: TShape;
+    splitViewPagament: TSplitView;
+    pnlPG: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure btnMenuFuncoesClick(Sender: TObject);
   private
     FLogin: TformLogin;
     procedure MontarButtons;
@@ -113,11 +116,12 @@ var
 
 implementation
 
-uses apdv.datamodule.dados;
+uses apdv.datamodule.dados, acpdv.view.pagament;
 
 {$R *.dfm}
 
 { TForm1 }
+
 procedure TfrmPrincipal.FormFix;
 begin
   self.WindowState := TWindowState.wsNormal;
@@ -130,6 +134,8 @@ end;
 
 procedure TfrmPrincipal.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
+var
+  iPagamentos: TformFinalizarVenda;
 begin
 
   case key of
@@ -138,9 +144,23 @@ begin
     VK_F4: ShowMessage('F4');
     VK_F5: ShowMessage('F5');
     VK_F6: ShowMessage('F6');
-    VK_F12: ShowMessage('F12');
+    VK_F12: btnMenuFuncoesClick(nil);
+    VK_F7:
+    begin
+      if iPagamentos = nil then
+        iPagamentos := TformFinalizarVenda.Create(nil);
+      iPagamentos.parent := pnlPG;
+      iPagamentos.show;
+      splitViewPagament.Opened := not splitViewPagament.Opened;
+
+    end;
   end;
 
+end;
+
+procedure TfrmPrincipal.btnMenuFuncoesClick(Sender: TObject);
+begin
+  SplitViewAction(splitViewFuncoes);
 end;
 
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -150,7 +170,6 @@ end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
- //ormFix;
   MontarButtons;
 end;
 
@@ -170,7 +189,7 @@ begin
   btnCancelarVenda.Caption := btnCancelarVenda.Caption + ''#13'' + ' (F6) ';
   btnCancelarItem.Caption := btnCancelarItem.Caption + ''#13'' + ' (F5) ';
   btnMenuFuncoes.Caption := btnMenuFuncoes.Caption + ''#13'' + ' (F12) ';
-  // btnDevolucao.Caption      := btnDevolucao.Caption + ''#13'' + ' (ESC) ';
+
 end;
 
 procedure TfrmPrincipal.SplitViewAction(value: TSplitView);

@@ -20,7 +20,7 @@ uses
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Data.DB,
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Imaging.jpeg, acpdv.view.login,
-  Vcl.WinXCtrls;
+  Vcl.WinXCtrls, apdv.datamodule.dados, acpdv.view.pagament;
 
 type
   TfrmPrincipal = class(TForm)
@@ -93,6 +93,8 @@ type
     Shape16: TShape;
     pnlDescontoItem: TPanel;
     Shape17: TShape;
+    splitViewPagament: TSplitView;
+    pnlPG: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -100,6 +102,8 @@ type
     procedure btnMenuFuncoesClick(Sender: TObject);
   private
     FLogin: TformLogin;
+    FPagamentos: TformFinalizarVenda;
+
     procedure MontarButtons;
     procedure FormFix;
 
@@ -113,8 +117,6 @@ var
   frmPrincipal: TfrmPrincipal;
 
 implementation
-
-uses apdv.datamodule.dados;
 
 {$R *.dfm}
 
@@ -132,6 +134,7 @@ end;
 
 procedure TfrmPrincipal.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
+
 begin
 
   case key of
@@ -141,6 +144,14 @@ begin
     VK_F5: ShowMessage('F5');
     VK_F6: ShowMessage('F6');
     VK_F12: btnMenuFuncoesClick(nil);
+    VK_F7:
+    begin
+
+      FPagamentos.parent := pnlPG;
+      FPagamentos.show;
+      splitViewPagament.Opened := not splitViewPagament.Opened;
+
+    end;
   end;
 
 end;
@@ -153,6 +164,7 @@ end;
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   FLogin.free;
+  FPagamentos.free;
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
@@ -162,6 +174,8 @@ end;
 
 procedure TfrmPrincipal.FormShow(Sender: TObject);
 begin
+  FPagamentos := TformFinalizarVenda.Create(nil);
+
   FLogin := TformLogin.Create(nil);
   FLogin.Parent := pnlMaster;
   FLogin.Show;
