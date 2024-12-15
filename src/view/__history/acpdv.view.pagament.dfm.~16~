@@ -2270,13 +2270,14 @@ object formFinalizarVenda: TformFinalizarVenda
               ExplicitHeight = 5
             end
           end
-          object pnlInformacoesPagamento: TPanel
+          object Panel13: TPanel
             Left = 0
             Top = 45
             Width = 507
-            Height = 311
-            Align = alClient
+            Height = 276
+            Align = alTop
             BevelOuter = bvNone
+            Caption = 'Formas de Pagamentos'
             Color = 13288645
             Font.Charset = DEFAULT_CHARSET
             Font.Color = 6708056
@@ -2286,8 +2287,6 @@ object formFinalizarVenda: TformFinalizarVenda
             ParentBackground = False
             ParentFont = False
             TabOrder = 1
-            ExplicitLeft = 88
-            ExplicitTop = 48
           end
         end
       end

@@ -2270,25 +2270,6 @@ object formFinalizarVenda: TformFinalizarVenda
               ExplicitHeight = 5
             end
           end
-          object pnlInformacoesPagamento: TPanel
-            Left = 0
-            Top = 45
-            Width = 507
-            Height = 311
-            Align = alClient
-            BevelOuter = bvNone
-            Color = 13288645
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = 6708056
-            Font.Height = -19
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentBackground = False
-            ParentFont = False
-            TabOrder = 1
-            ExplicitLeft = 88
-            ExplicitTop = 48
-          end
         end
       end
     end

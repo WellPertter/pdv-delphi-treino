@@ -2286,7 +2286,6 @@ object formFinalizarVenda: TformFinalizarVenda
             ParentBackground = False
             ParentFont = False
             TabOrder = 1
-            ExplicitLeft = 88
             ExplicitTop = 48
           end
         end

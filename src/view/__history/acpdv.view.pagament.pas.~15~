@@ -73,7 +73,7 @@ type
     pnlContainerPG: TPanel;
     Panel5: TPanel;
     Shape7: TShape;
-    pnlInformacoesPagamento: TPanel;
+    Panel13: TPanel;
     procedure btnEditClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
@@ -101,7 +101,8 @@ var
   FFramePix : TframePIX;
 begin
   FFramePix := TframePIX.Create(nil);
-  FFramePix.parent := pnlInformacoesPagamento;
+  FFramePix.Align := alClient;
+  FFramePix.parent := Panel13;
   FFramePix.show;
 
 end;

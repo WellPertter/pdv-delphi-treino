@@ -2228,12 +2228,10 @@ object formFinalizarVenda: TformFinalizarVenda
           Font.Name = 'Segoe UI'
           Font.Style = []
           Padding.Top = 20
-          Padding.Bottom = 20
           ParentBackground = False
           ParentFont = False
           TabOrder = 2
-          ExplicitLeft = 70
-          ExplicitTop = 147
+          ExplicitTop = 221
           object Panel5: TPanel
             AlignWithMargins = True
             Left = 0
@@ -2269,25 +2267,6 @@ object formFinalizarVenda: TformFinalizarVenda
               ExplicitTop = 0
               ExplicitHeight = 5
             end
-          end
-          object pnlInformacoesPagamento: TPanel
-            Left = 0
-            Top = 45
-            Width = 507
-            Height = 311
-            Align = alClient
-            BevelOuter = bvNone
-            Color = 13288645
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = 6708056
-            Font.Height = -19
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentBackground = False
-            ParentFont = False
-            TabOrder = 1
-            ExplicitLeft = 88
-            ExplicitTop = 48
           end
         end
       end

@@ -70,10 +70,9 @@ type
     Panel11: TPanel;
     Image4: TImage;
     Panel12: TPanel;
-    pnlContainerPG: TPanel;
+    pnlInformacoesPagamento: TPanel;
     Panel5: TPanel;
     Shape7: TShape;
-    pnlInformacoesPagamento: TPanel;
     procedure btnEditClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
@@ -100,9 +99,6 @@ procedure TformFinalizarVenda.FormShow(Sender: TObject);
 var
   FFramePix : TframePIX;
 begin
-  FFramePix := TframePIX.Create(nil);
-  FFramePix.parent := pnlInformacoesPagamento;
-  FFramePix.show;
 
 end;
 

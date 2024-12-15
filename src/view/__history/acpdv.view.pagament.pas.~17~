@@ -1,3 +1,5 @@
+// God Is Perfecet!!!!
+
 unit acpdv.view.pagament;
 
 interface
@@ -41,10 +43,38 @@ type
     Label8: TLabel;
     edtSaldoRestante: TEdit;
     pnlTroco: TPanel;
-    Label9: TLabel;
     edtTroco: TEdit;
     edtTotalRecebido: TEdit;
+    pnlAllTop: TPanel;
+    pnlBottomTopLine: TPanel;
+    Shape3: TShape;
+    Panel3: TPanel;
+    pnlMainFormas: TPanel;
+    pnlTitleFormaPagament: TPanel;
+    pnlOpecoesFormas: TPanel;
+    pnlButtonOne: TPanel;
+    Shape4: TShape;
+    Panel4: TPanel;
+    pnlImagemCartao: TPanel;
+    Panel6: TPanel;
+    Image2: TImage;
+    pnlButtonTwo: TPanel;
+    Shape5: TShape;
+    Panel7: TPanel;
+    Panel8: TPanel;
+    Image3: TImage;
+    Panel9: TPanel;
+    pnlButtonTree: TPanel;
+    Shape6: TShape;
+    Panel10: TPanel;
+    Panel11: TPanel;
+    Image4: TImage;
+    Panel12: TPanel;
+    pnlContainerPG: TPanel;
+    Panel5: TPanel;
+    Shape7: TShape;
     procedure btnEditClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -58,9 +88,21 @@ implementation
 
 {$R *.dfm}
 
+uses acpdv.view.frame.pix;
+
 procedure TformFinalizarVenda.btnEditClick(Sender: TObject);
 begin
   ShowMessage('oi')
+end;
+
+procedure TformFinalizarVenda.FormShow(Sender: TObject);
+var
+  FFramePix : TframePIX;
+begin
+  FFramePix := TframePIX.Create(nil);
+  FFramePix.parent := pnlContainerPG;
+  FFramePix.show;
+
 end;
 
 end.

@@ -26,7 +26,75 @@ object formFinalizarVenda: TformFinalizarVenda
       Height = 617
       Align = alClient
       BevelOuter = bvNone
+      Caption = 'Formas de Pagamentos'
+      Color = clWhite
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 279
+      ExplicitTop = -7
+      object pnlAllTop: TPanel
+        Left = 0
+        Top = 0
+        Width = 567
+        Height = 100
+        Align = alTop
+        BevelOuter = bvNone
+        Padding.Left = 30
+        Padding.Top = 20
+        Padding.Right = 30
+        TabOrder = 0
+        object pnlBottomTopLine: TPanel
+          Left = 30
+          Top = 95
+          Width = 507
+          Height = 5
+          Align = alBottom
+          BevelOuter = bvNone
+          Color = 13288645
+          Padding.Left = 10
+          Padding.Right = 10
+          ParentBackground = False
+          TabOrder = 0
+          ExplicitTop = 59
+          object Shape3: TShape
+            AlignWithMargins = True
+            Left = 10
+            Top = 5
+            Width = 487
+            Height = -5
+            Margins.Left = 0
+            Margins.Top = 5
+            Margins.Right = 0
+            Margins.Bottom = 5
+            Align = alClient
+            Brush.Color = 1357025
+            Pen.Style = psClear
+            ExplicitTop = 0
+            ExplicitHeight = 5
+          end
+        end
+        object Panel3: TPanel
+          Left = 30
+          Top = 20
+          Width = 507
+          Height = 75
+          Align = alClient
+          BevelOuter = bvNone
+          Caption = 'Formas de Pagamentos'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 6708056
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentBackground = False
+          ParentFont = False
+          TabOrder = 1
+          ExplicitLeft = 184
+          ExplicitTop = 29
+          ExplicitWidth = 185
+          ExplicitHeight = 41
+        end
+      end
     end
     object pnlInformacoes: TPanel
       Left = 0
@@ -97,7 +165,6 @@ object formFinalizarVenda: TformFinalizarVenda
           ParentBackground = False
           ParentFont = False
           TabOrder = 0
-          ExplicitTop = 21
           object pnlOne: TPanel
             Left = 0
             Top = 0
@@ -120,6 +187,7 @@ object formFinalizarVenda: TformFinalizarVenda
               Width = 25
               Height = 25
               Align = alLeft
+              DragCursor = crHandPoint
               Picture.Data = {
                 0954506E67496D61676589504E470D0A1A0A0000000D49484452000002000000
                 02000806000000F478D4FA000000097048597300007DFB00007DFB01B3EE8DE0
@@ -1937,6 +2005,7 @@ object formFinalizarVenda: TformFinalizarVenda
               Align = alClient
               Caption = 'Edit'
               Color = 5589317
+              DragCursor = crHandPoint
               Font.Charset = DEFAULT_CHARSET
               Font.Color = 1357025
               Font.Height = -16
@@ -1953,7 +2022,7 @@ object formFinalizarVenda: TformFinalizarVenda
             Left = 0
             Top = 30
             Width = 233
-            Height = 171
+            Height = 123
             Margins.Left = 0
             Margins.Top = 5
             Margins.Right = 0
@@ -1969,6 +2038,21 @@ object formFinalizarVenda: TformFinalizarVenda
             ParentBackground = False
             ParentFont = False
             TabOrder = 1
+            object Shape1: TShape
+              AlignWithMargins = True
+              Left = 0
+              Top = 115
+              Width = 233
+              Height = 5
+              Margins.Left = 0
+              Margins.Top = 5
+              Margins.Right = 0
+              Margins.Bottom = 5
+              Align = alTop
+              Brush.Color = 1357025
+              Pen.Style = psClear
+              ExplicitTop = 110
+            end
             object pnlTotalVenda: TPanel
               AlignWithMargins = True
               Left = 0
@@ -1990,7 +2074,6 @@ object formFinalizarVenda: TformFinalizarVenda
               ParentBackground = False
               ParentFont = False
               TabOrder = 0
-              ExplicitTop = 8
               object Label1: TLabel
                 Left = 0
                 Top = 0
@@ -2034,7 +2117,6 @@ object formFinalizarVenda: TformFinalizarVenda
               ParentBackground = False
               ParentFont = False
               TabOrder = 1
-              ExplicitTop = 8
               object Label2: TLabel
                 Left = 0
                 Top = 0
@@ -2080,7 +2162,6 @@ object formFinalizarVenda: TformFinalizarVenda
               ParentBackground = False
               ParentFont = False
               TabOrder = 2
-              ExplicitTop = 8
               object Label3: TLabel
                 Left = 0
                 Top = 0
@@ -2125,7 +2206,6 @@ object formFinalizarVenda: TformFinalizarVenda
               ParentBackground = False
               ParentFont = False
               TabOrder = 3
-              ExplicitTop = 8
               object Label5: TLabel
                 Left = 0
                 Top = 0
@@ -2146,6 +2226,177 @@ object formFinalizarVenda: TformFinalizarVenda
                 ExplicitLeft = 203
                 ExplicitWidth = 30
                 ExplicitHeight = 21
+              end
+            end
+          end
+          object Panel2: TPanel
+            Left = 0
+            Top = 153
+            Width = 233
+            Height = 171
+            Margins.Left = 0
+            Margins.Top = 5
+            Margins.Right = 0
+            Margins.Bottom = 0
+            Align = alTop
+            BevelOuter = bvNone
+            Color = 5589317
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -16
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 2
+            object Shape2: TShape
+              AlignWithMargins = True
+              Left = 0
+              Top = 90
+              Width = 233
+              Height = 5
+              Margins.Left = 0
+              Margins.Top = 5
+              Margins.Right = 0
+              Margins.Bottom = 5
+              Align = alTop
+              Brush.Color = 1357025
+              Pen.Style = psClear
+              ExplicitTop = 110
+            end
+            object pnlRecebido: TPanel
+              AlignWithMargins = True
+              Left = 0
+              Top = 10
+              Width = 233
+              Height = 25
+              Margins.Left = 0
+              Margins.Top = 10
+              Margins.Right = 0
+              Margins.Bottom = 0
+              Align = alTop
+              BevelOuter = bvNone
+              Color = 5589317
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Height = -16
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentBackground = False
+              ParentFont = False
+              TabOrder = 0
+              object Label6: TLabel
+                Left = 0
+                Top = 0
+                Width = 103
+                Height = 25
+                Align = alLeft
+                Caption = 'Total Recebido:'
+                ExplicitHeight = 21
+              end
+              object edtTotalRecebido: TEdit
+                Left = 103
+                Top = 0
+                Width = 130
+                Height = 25
+                Align = alClient
+                Alignment = taRightJustify
+                BevelInner = bvNone
+                BevelOuter = bvNone
+                BorderStyle = bsNone
+                Color = 5589317
+                TabOrder = 0
+                Text = '0,00'
+              end
+            end
+            object pnlRestante: TPanel
+              AlignWithMargins = True
+              Left = 0
+              Top = 35
+              Width = 233
+              Height = 25
+              Margins.Left = 0
+              Margins.Top = 0
+              Margins.Right = 0
+              Margins.Bottom = 0
+              Align = alTop
+              BevelOuter = bvNone
+              Color = 5589317
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Height = -16
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentBackground = False
+              ParentFont = False
+              TabOrder = 1
+              object Label8: TLabel
+                Left = 0
+                Top = 0
+                Width = 142
+                Height = 25
+                Align = alLeft
+                Caption = 'Saldo Restante:         '
+                ExplicitHeight = 21
+              end
+              object edtSaldoRestante: TEdit
+                Left = 142
+                Top = 0
+                Width = 91
+                Height = 25
+                Align = alClient
+                Alignment = taRightJustify
+                BevelInner = bvNone
+                BevelOuter = bvNone
+                BorderStyle = bsNone
+                Color = 5589317
+                TabOrder = 0
+                Text = '0,00'
+              end
+            end
+            object pnlTroco: TPanel
+              AlignWithMargins = True
+              Left = 0
+              Top = 60
+              Width = 233
+              Height = 25
+              Margins.Left = 0
+              Margins.Top = 0
+              Margins.Right = 0
+              Margins.Bottom = 0
+              Align = alTop
+              BevelOuter = bvNone
+              Color = 5589317
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Height = -16
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentBackground = False
+              ParentFont = False
+              TabOrder = 2
+              object Label9: TLabel
+                Left = 0
+                Top = 0
+                Width = 73
+                Height = 25
+                Align = alLeft
+                Caption = 'Troco:        '
+                ExplicitHeight = 21
+              end
+              object edtTroco: TEdit
+                Left = 73
+                Top = 0
+                Width = 160
+                Height = 25
+                Align = alClient
+                Alignment = taRightJustify
+                BevelInner = bvNone
+                BevelOuter = bvNone
+                BorderStyle = bsNone
+                Color = 5589317
+                TabOrder = 0
+                Text = '0,00'
               end
             end
           end

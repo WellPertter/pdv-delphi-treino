@@ -26,7 +26,86 @@ object formFinalizarVenda: TformFinalizarVenda
       Height = 617
       Align = alClient
       BevelOuter = bvNone
+      Color = clWhite
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 329
+      ExplicitTop = 164
+      object pnlAllTop: TPanel
+        Left = 0
+        Top = 0
+        Width = 567
+        Height = 100
+        Align = alTop
+        BevelOuter = bvNone
+        Padding.Left = 30
+        Padding.Top = 20
+        Padding.Right = 30
+        TabOrder = 0
+        object pnlBottomTopLine: TPanel
+          Left = 30
+          Top = 95
+          Width = 507
+          Height = 5
+          Align = alBottom
+          BevelOuter = bvNone
+          Color = 13288645
+          Padding.Left = 10
+          Padding.Right = 10
+          ParentBackground = False
+          TabOrder = 0
+          object Shape3: TShape
+            AlignWithMargins = True
+            Left = 10
+            Top = 5
+            Width = 487
+            Height = -5
+            Margins.Left = 0
+            Margins.Top = 5
+            Margins.Right = 0
+            Margins.Bottom = 5
+            Align = alClient
+            Brush.Color = 1357025
+            Pen.Style = psClear
+            ExplicitTop = 0
+            ExplicitHeight = 5
+          end
+        end
+        object Panel3: TPanel
+          Left = 30
+          Top = 20
+          Width = 507
+          Height = 75
+          Align = alClient
+          BevelOuter = bvNone
+          Caption = 'Formas de Pagamentos'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 6708056
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentBackground = False
+          ParentFont = False
+          TabOrder = 1
+        end
+      end
+      object Panel4: TPanel
+        Left = 0
+        Top = 100
+        Width = 567
+        Height = 77
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'Formas de Pagamentos'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 6708056
+        Font.Height = -19
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentBackground = False
+        ParentFont = False
+        TabOrder = 1
+      end
     end
     object pnlInformacoes: TPanel
       Left = 0
@@ -2220,15 +2299,16 @@ object formFinalizarVenda: TformFinalizarVenda
               object Label6: TLabel
                 Left = 0
                 Top = 0
-                Width = 117
+                Width = 103
                 Height = 25
                 Align = alLeft
                 Caption = 'Total Recebido:'
+                ExplicitHeight = 21
               end
               object edtTotalRecebido: TEdit
-                Left = 117
+                Left = 103
                 Top = 0
-                Width = 116
+                Width = 130
                 Height = 25
                 Align = alClient
                 Alignment = taRightJustify
@@ -2264,15 +2344,16 @@ object formFinalizarVenda: TformFinalizarVenda
               object Label8: TLabel
                 Left = 0
                 Top = 0
-                Width = 123
+                Width = 142
                 Height = 25
                 Align = alLeft
                 Caption = 'Saldo Restante:         '
+                ExplicitHeight = 21
               end
               object edtSaldoRestante: TEdit
-                Left = 123
+                Left = 142
                 Top = 0
-                Width = 110
+                Width = 91
                 Height = 25
                 Align = alClient
                 Alignment = taRightJustify
@@ -2308,15 +2389,16 @@ object formFinalizarVenda: TformFinalizarVenda
               object Label9: TLabel
                 Left = 0
                 Top = 0
-                Width = 123
+                Width = 73
                 Height = 25
                 Align = alLeft
                 Caption = 'Troco:        '
+                ExplicitHeight = 21
               end
               object edtTroco: TEdit
-                Left = 123
+                Left = 73
                 Top = 0
-                Width = 110
+                Width = 160
                 Height = 25
                 Align = alClient
                 Alignment = taRightJustify
