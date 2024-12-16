@@ -147,6 +147,8 @@ begin
     VK_F7:
     begin
 
+      FPagamentos.parent := pnlPG;
+      FPagamentos.show;
       splitViewPagament.Opened := not splitViewPagament.Opened;
 
     end;
@@ -161,8 +163,8 @@ end;
 
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  FreeAndNil(FLogin);
-  FreeAndNil(FPagamentos);
+  FLogin.free;
+  FPagamentos.free;
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
@@ -174,15 +176,10 @@ procedure TfrmPrincipal.FormShow(Sender: TObject);
 begin
   FPagamentos := TformFinalizarVenda.Create(nil);
 
-  FPagamentos.parent := pnlPG;
-  FPagamentos.show;
-
   FLogin := TformLogin.Create(nil);
   FLogin.Parent := pnlMaster;
   FLogin.Show;
   FLogin.edtUsuario.SetFocus;
-
-
 end;
 
 procedure TfrmPrincipal.MontarButtons;

@@ -173,7 +173,6 @@ end;
 procedure TfrmPrincipal.FormShow(Sender: TObject);
 begin
   FPagamentos := TformFinalizarVenda.Create(nil);
-
   FPagamentos.parent := pnlPG;
   FPagamentos.show;
 

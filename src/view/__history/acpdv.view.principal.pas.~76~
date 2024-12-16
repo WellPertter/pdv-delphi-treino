@@ -174,15 +174,13 @@ procedure TfrmPrincipal.FormShow(Sender: TObject);
 begin
   FPagamentos := TformFinalizarVenda.Create(nil);
 
-  FPagamentos.parent := pnlPG;
-  FPagamentos.show;
-
   FLogin := TformLogin.Create(nil);
   FLogin.Parent := pnlMaster;
   FLogin.Show;
   FLogin.edtUsuario.SetFocus;
 
-
+  FPagamentos.parent := pnlPG;
+  FPagamentos.show;
 end;
 
 procedure TfrmPrincipal.MontarButtons;

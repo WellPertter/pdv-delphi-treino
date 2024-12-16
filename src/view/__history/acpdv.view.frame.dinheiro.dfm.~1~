@@ -1,0 +1,61 @@
+object formDinheiro: TformDinheiro
+  Left = 0
+  Top = 0
+  Width = 507
+  Height = 311
+  TabOrder = 0
+  object pnlContainer: TPanel
+    Left = 0
+    Top = 0
+    Width = 507
+    Height = 311
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 0
+    ExplicitLeft = 160
+    ExplicitTop = 112
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object pnlValorRecebido: TPanel
+      Left = 32
+      Top = 72
+      Width = 377
+      Height = 33
+      BevelOuter = bvNone
+      TabOrder = 0
+      object lblValorRecebido: TLabel
+        Left = 180
+        Top = 0
+        Width = 197
+        Height = 33
+        Align = alClient
+        Alignment = taRightJustify
+        Caption = '0,00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -27
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        ExplicitLeft = 326
+        ExplicitWidth = 51
+        ExplicitHeight = 37
+      end
+      object Label2: TLabel
+        Left = 0
+        Top = 0
+        Width = 180
+        Height = 33
+        Align = alLeft
+        Caption = 'Total Recebido:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -27
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        ExplicitHeight = 37
+      end
+    end
+  end
+end

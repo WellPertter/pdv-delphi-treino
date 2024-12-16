@@ -10,7 +10,7 @@ object formFinalizarVenda: TformFinalizarVenda
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OnDestroy = FormDestroy
+  OnClose = FormClose
   OnShow = FormShow
   TextHeight = 15
   object pnlContainer: TPanel
@@ -90,6 +90,8 @@ object formFinalizarVenda: TformFinalizarVenda
           ParentBackground = False
           ParentFont = False
           TabOrder = 1
+          ExplicitLeft = 35
+          ExplicitTop = 22
         end
       end
       object pnlMainFormas: TPanel
@@ -560,7 +562,7 @@ object formFinalizarVenda: TformFinalizarVenda
                   AlignWithMargins = True
                   Left = 45
                   Top = 0
-                  Width = 50
+                  Width = 52
                   Height = 49
                   Margins.Left = 45
                   Margins.Top = 0
@@ -1016,6 +1018,7 @@ object formFinalizarVenda: TformFinalizarVenda
                   Stretch = True
                   OnClick = Image3Click
                   ExplicitLeft = 0
+                  ExplicitWidth = 50
                   ExplicitHeight = 41
                 end
               end

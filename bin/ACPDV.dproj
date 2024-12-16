@@ -129,7 +129,12 @@
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="..\src\view\acpdv.view.frame.dinheiro.pas">
-            <Form>formDinheiro</Form>
+            <Form>frameDinheiro</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\src\view\acpdv.view.frame.cartao.pas">
+            <Form>frameCartao</Form>
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>

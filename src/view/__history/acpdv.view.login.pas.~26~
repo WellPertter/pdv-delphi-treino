@@ -58,7 +58,6 @@ end;
 
 procedure TformLogin.edtPasswordKeyPress(Sender: TObject; var Key: Char);
 begin
-
   if key = #13 then
   begin
     btnLogaClick(nil);
@@ -69,8 +68,7 @@ end;
 
 procedure TformLogin.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  FreeAndNil(Ffundo);
- // Ffundo.free;
+  Ffundo.free;
 end;
 
 procedure TformLogin.FormCreate(Sender: TObject);

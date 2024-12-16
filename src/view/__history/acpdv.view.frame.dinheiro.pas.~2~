@@ -10,11 +10,11 @@ uses
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
-  TframeDinheiro = class(TFrame)
+  TformDinheiro = class(TFrame)
     pnlContainer: TPanel;
     pnlValorRecebido: TPanel;
+    lblValorRecebido: TLabel;
     Label2: TLabel;
-    edtValorRecebido: TEdit;
   private
     { Private declarations }
   public

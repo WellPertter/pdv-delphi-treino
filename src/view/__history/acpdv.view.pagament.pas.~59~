@@ -7,7 +7,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
-  Vcl.Buttons, Vcl.StdCtrls, acpdv.view.frame.pix, acpdv.view.frame.dinheiro, acpdv.view.frame.cartao;
+  Vcl.Buttons, Vcl.StdCtrls, acpdv.view.frame.pix, acpdv.view.frame.dinheiro;
 
 type
   TformFinalizarVenda = class(TForm)
@@ -83,7 +83,6 @@ type
   private
       FFramePix : TframePIX;
       FFrameDinheiro : TframeDinheiro;
-      FFrameCartao   : TframeCartao;
 
       procedure SetFrame(Frame: TFrame);
       procedure SetClick(Shape: TShape; Panel:TPanel);
@@ -97,7 +96,6 @@ var
 
 implementation
 
-
 {$R *.dfm}
 
 procedure TformFinalizarVenda.btnEditClick(Sender: TObject);
@@ -109,14 +107,12 @@ procedure TformFinalizarVenda.FormDestroy(Sender: TObject);
 begin
   FreeAndNil(FFramePix);
   FreeAndNil(FFrameDinheiro);
-  FreeAndNil(FFrameCartao);
 end;
 
 procedure TformFinalizarVenda.FormShow(Sender: TObject);
 begin
   FFrameDinheiro := TframeDinheiro.Create(nil);
   FFramePix      := TframePIX.Create(nil);
-  FFrameCartao   := TframeCartao.Create(nil);
 
   SetFrame(FFramePix);
   SetClick(shapePix, pnlButtonTwo);
@@ -130,16 +126,14 @@ end;
 
 procedure TformFinalizarVenda.imgCartaoClick(Sender: TObject);
 begin
-  SetFrame(FFrameCartao);
+//  SetFrame(FFramePix);
   SetClick(shapeCartao, pnlButtonone);
-  //FFrameCartao.SetClick(FFrameCartao.shapeCartaoCredito, FFrameCartao.pnlButtonOne);
 end;
 
 procedure TformFinalizarVenda.imgDinheiroClick(Sender: TObject);
 begin
   SetFrame(FFrameDinheiro);
   SetClick(shapeDinheiro, pnlButtonTree);
-  FFrameDinheiro.edtValorRecebido.SetFocus;
 end;
 
 procedure TformFinalizarVenda.SetClick(Shape: TShape; Panel: TPanel);
@@ -156,7 +150,6 @@ procedure TformFinalizarVenda.SetFrame(Frame: TFrame);
 begin
   FFramePix.Visible      := false;
   FFrameDinheiro.Visible := false;
-  FFrameCartao.Visible := false;
 
   Frame.parent := pnlInformacoesPagamento;
   Frame.show;

@@ -109,7 +109,6 @@ procedure TformFinalizarVenda.FormDestroy(Sender: TObject);
 begin
   FreeAndNil(FFramePix);
   FreeAndNil(FFrameDinheiro);
-  FreeAndNil(FFrameCartao);
 end;
 
 procedure TformFinalizarVenda.FormShow(Sender: TObject);
@@ -132,7 +131,6 @@ procedure TformFinalizarVenda.imgCartaoClick(Sender: TObject);
 begin
   SetFrame(FFrameCartao);
   SetClick(shapeCartao, pnlButtonone);
-  //FFrameCartao.SetClick(FFrameCartao.shapeCartaoCredito, FFrameCartao.pnlButtonOne);
 end;
 
 procedure TformFinalizarVenda.imgDinheiroClick(Sender: TObject);
