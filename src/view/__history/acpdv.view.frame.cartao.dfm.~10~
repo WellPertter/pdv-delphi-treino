@@ -14,6 +14,8 @@ object frameCartao: TframeCartao
     Color = 13288645
     ParentBackground = False
     TabOrder = 0
+    ExplicitLeft = 8
+    ExplicitTop = 8
     object pnlOpecoesFormas: TPanel
       AlignWithMargins = True
       Left = 0
@@ -36,6 +38,8 @@ object frameCartao: TframeCartao
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
+      ExplicitLeft = 30
+      ExplicitTop = 51
       object pnlButtonOne: TPanel
         AlignWithMargins = True
         Left = 0
@@ -663,6 +667,7 @@ object frameCartao: TframeCartao
       ParentBackground = False
       ParentFont = False
       TabOrder = 1
+      ExplicitTop = 90
       object pnlBandeira4: TPanel
         AlignWithMargins = True
         Left = 393
@@ -685,6 +690,8 @@ object frameCartao: TframeCartao
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
+        ExplicitLeft = 0
+        ExplicitHeight = 119
         object shapebandeira4: TShape
           Left = 0
           Top = 0
@@ -2933,6 +2940,8 @@ object frameCartao: TframeCartao
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
+        ExplicitLeft = 8
+        ExplicitHeight = 119
         object shapebandeira3: TShape
           Left = 0
           Top = 0
@@ -16092,6 +16101,7 @@ object frameCartao: TframeCartao
         ParentBackground = False
         ParentFont = False
         TabOrder = 2
+        ExplicitLeft = 8
         object shapebandeira2: TShape
           Left = 0
           Top = 0
@@ -16487,6 +16497,7 @@ object frameCartao: TframeCartao
         ParentBackground = False
         ParentFont = False
         TabOrder = 3
+        ExplicitLeft = 8
         object shapebandeira1: TShape
           Left = 0
           Top = 0

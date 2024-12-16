@@ -101,7 +101,6 @@ end;
 procedure TframeCartao.imgCartaodebitoClick(Sender: TObject);
 begin
   SetClick(shapeCartaoDebito, pnlButtonTwo);
-  SetClickBandeira(shapebandeira1, pnlBandeira1);
 end;
     {
 class function TframeCartao.New(AOwner: TComponent): TFrameCartao;
