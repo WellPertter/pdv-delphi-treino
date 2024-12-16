@@ -8,8 +8,8 @@
     <Transaction>2023/08/06 18:19:35.000.196,C:\Users\Arthur\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Desenvolvimento\ac-pdv\src\view\acpdv.view.principal.pas</Transaction>
     <Transaction>2023/08/06 18:19:52.000.827,C:\Users\Arthur\Documents\Embarcadero\Studio\Projects\ACPDV.dproj=C:\Desenvolvimento\ac-pdv\bin\ACPDV.dproj</Transaction>
     <Transaction>2024/12/11 22:02:51.000.224,=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
-    <Transaction>2024/12/11 22:03:11.000.214,C:\Desenvolvimento\pdv-delphi-treino\src\view\acpdv.view.login.dfm=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.dfm</Transaction>
     <Transaction>2024/12/11 22:03:11.000.214,C:\Desenvolvimento\pdv-delphi-treino\src\view\acpdv.view.login.pas=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
+    <Transaction>2024/12/11 22:03:11.000.214,C:\Desenvolvimento\pdv-delphi-treino\src\view\acpdv.view.login.dfm=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.dfm</Transaction>
     <Transaction>2024/12/12 13:40:19.000.236,=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
     <Transaction>2024/12/12 13:42:25.000.453,C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas=C:\Desenvolvimento\pdv-delphi-treino\src\view\component\acpdv.view.component.transparence.pas</Transaction>
     <Transaction>2024/12/12 13:42:25.000.453,C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.dfm=C:\Desenvolvimento\pdv-delphi-treino\src\view\component\acpdv.view.component.transparence.dfm</Transaction>
@@ -19,9 +19,13 @@
     <Transaction>2024/12/13 15:51:28.000.862,=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
     <Transaction>2024/12/13 15:58:51.000.460,C:\Desenvolvimento\pdv-delphi-treino\src\view\acpdv.view.pagament.pas=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
     <Transaction>2024/12/13 15:58:51.000.460,C:\Desenvolvimento\pdv-delphi-treino\src\view\acpdv.view.pagament.dfm=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.dfm</Transaction>
-    <Transaction>2024/12/15 10:01:58.721,=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
-    <Transaction>2024/12/15 10:02:29.933,=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
-    <Transaction>2024/12/15 10:08:46.092,C:\Desenvolvimento\pdv-delphi-treino\src\view\acpdv.view.frame.pix.dfm=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.dfm</Transaction>
-    <Transaction>2024/12/15 10:08:46.092,C:\Desenvolvimento\pdv-delphi-treino\src\view\acpdv.view.frame.pix.pas=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
+    <Transaction>2024/12/15 10:01:58.000.721,=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
+    <Transaction>2024/12/15 10:02:29.000.933,=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
+    <Transaction>2024/12/15 10:08:46.000.092,C:\Desenvolvimento\pdv-delphi-treino\src\view\acpdv.view.frame.pix.dfm=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.dfm</Transaction>
+    <Transaction>2024/12/15 10:08:46.000.092,C:\Desenvolvimento\pdv-delphi-treino\src\view\acpdv.view.frame.pix.pas=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
+    <Transaction>2024/12/16 11:03:07.828,=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
+    <Transaction>2024/12/16 11:03:18.343,=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
+    <Transaction>2024/12/16 11:13:35.671,C:\Desenvolvimento\pdv-delphi-treino\src\view\acpdv.view.frame.dinheiro.dfm=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.dfm</Transaction>
+    <Transaction>2024/12/16 11:13:35.671,C:\Desenvolvimento\pdv-delphi-treino\src\view\acpdv.view.frame.dinheiro.pas=C:\Desenvolvimento\pdv-delphi-treino\bin\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

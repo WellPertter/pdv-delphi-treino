@@ -84,7 +84,7 @@ type
       FFramePix : TframePIX;
       FFrameDinheiro : TformDinheiro;
 
-      procedure SetFrame(Frame: TFrame);
+
       procedure SetClick(Shape: TShape; Panel:TPanel);
     { Private declarations }
   public
@@ -112,25 +112,32 @@ end;
 
 procedure TformFinalizarVenda.FormShow(Sender: TObject);
 begin
-  FFrameDinheiro := TformDinheiro.Create(nil);
-  FFramePix      := TframePIX.Create(nil);
+  FFrameDinheiro := TformDinheiro.create(nil);
+  FFramePix := TframePIX.Create(nil);
 end;
 
 procedure TformFinalizarVenda.Image3Click(Sender: TObject);
 begin
-  SetFrame(FFramePix);
+
+  FFramePix.parent := pnlInformacoesPagamento;
+  FFramePix.show;
+
   SetClick(shapePix, pnlButtonTwo);
 end;
 
 procedure TformFinalizarVenda.imgCartaoClick(Sender: TObject);
 begin
-  SetFrame(FFramePix);
+  //FFramePix.parent := pnlInformacoesPagamento;
+//  FFramePix.show;
+
   SetClick(shapeCartao, pnlButtonone);
 end;
 
 procedure TformFinalizarVenda.imgDinheiroClick(Sender: TObject);
 begin
-  SetFrame(FFrameDinheiro);
+  FFrameDinheiro.parent := pnlInformacoesPagamento;
+  FFrameDinheiro.show;
+
   SetClick(shapeDinheiro, pnlButtonTree);
 end;
 
@@ -142,15 +149,6 @@ begin
  Shape.pen.Style := psSolid;
 
  panel.Update;
-end;
-
-procedure TformFinalizarVenda.SetFrame(Frame: TFrame);
-begin
-  FFramePix.Visible      := false;
-  FFrameDinheiro.Visible := false;
-
-  Frame.parent := pnlInformacoesPagamento;
-  Frame.show;
 end;
 
 end.

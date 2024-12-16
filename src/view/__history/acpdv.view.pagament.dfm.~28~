@@ -114,9 +114,6 @@ object formFinalizarVenda: TformFinalizarVenda
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
-        ExplicitLeft = 30
-        ExplicitWidth = 507
-        ExplicitHeight = 61
         object pnlTitleFormaPagament: TPanel
           Left = 30
           Top = 0
@@ -139,7 +136,6 @@ object formFinalizarVenda: TformFinalizarVenda
           ParentBackground = False
           ParentFont = False
           TabOrder = 0
-          ExplicitLeft = 33
         end
         object pnlOpecoesFormas: TPanel
           AlignWithMargins = True
@@ -163,9 +159,6 @@ object formFinalizarVenda: TformFinalizarVenda
           ParentBackground = False
           ParentFont = False
           TabOrder = 1
-          ExplicitLeft = 60
-          ExplicitTop = 41
-          ExplicitWidth = 447
           object pnlButtonOne: TPanel
             AlignWithMargins = True
             Left = 0
@@ -188,7 +181,7 @@ object formFinalizarVenda: TformFinalizarVenda
             ParentBackground = False
             ParentFont = False
             TabOrder = 0
-            object Shape4: TShape
+            object shapeCartao: TShape
               Left = 0
               Top = 0
               Width = 150
@@ -214,8 +207,6 @@ object formFinalizarVenda: TformFinalizarVenda
               BevelOuter = bvNone
               ParentBackground = False
               TabOrder = 0
-              ExplicitLeft = -22
-              ExplicitTop = -27
               object pnlImagemCartao: TPanel
                 Left = 0
                 Top = 0
@@ -224,7 +215,7 @@ object formFinalizarVenda: TformFinalizarVenda
                 Align = alTop
                 BevelOuter = bvNone
                 TabOrder = 0
-                object Image2: TImage
+                object imgCartao: TImage
                   AlignWithMargins = True
                   Left = 45
                   Top = 0
@@ -484,6 +475,7 @@ object formFinalizarVenda: TformFinalizarVenda
                     020000021200001090000080800400000424000020A0FF0FBB4B2919E4DE305D
                     0000000049454E44AE426082}
                   Stretch = True
+                  OnClick = imgCartaoClick
                   ExplicitLeft = 0
                   ExplicitHeight = 41
                 end
@@ -497,9 +489,6 @@ object formFinalizarVenda: TformFinalizarVenda
                 BevelOuter = bvNone
                 Caption = 'Cart'#227'o'
                 TabOrder = 1
-                ExplicitLeft = 16
-                ExplicitTop = 9
-                ExplicitHeight = 41
               end
             end
           end
@@ -525,8 +514,7 @@ object formFinalizarVenda: TformFinalizarVenda
             ParentBackground = False
             ParentFont = False
             TabOrder = 1
-            ExplicitLeft = 8
-            object Shape5: TShape
+            object shapePix: TShape
               Left = 0
               Top = 0
               Width = 150
@@ -560,11 +548,12 @@ object formFinalizarVenda: TformFinalizarVenda
                 Align = alTop
                 BevelOuter = bvNone
                 TabOrder = 0
+                OnClick = Image3Click
                 object Image3: TImage
                   AlignWithMargins = True
                   Left = 45
                   Top = 0
-                  Width = 50
+                  Width = 52
                   Height = 49
                   Margins.Left = 45
                   Margins.Top = 0
@@ -1018,7 +1007,9 @@ object formFinalizarVenda: TformFinalizarVenda
                     0038408001007080000300E000010600C001020C008003041800000708300000
                     0EFC7F2E10D7A3E03230730000000049454E44AE426082}
                   Stretch = True
+                  OnClick = Image3Click
                   ExplicitLeft = 0
+                  ExplicitWidth = 50
                   ExplicitHeight = 41
                 end
               end
@@ -1031,6 +1022,7 @@ object formFinalizarVenda: TformFinalizarVenda
                 BevelOuter = bvNone
                 Caption = 'Pix'
                 TabOrder = 1
+                OnClick = Image3Click
               end
             end
           end
@@ -1056,8 +1048,7 @@ object formFinalizarVenda: TformFinalizarVenda
             ParentBackground = False
             ParentFont = False
             TabOrder = 2
-            ExplicitLeft = 8
-            object Shape6: TShape
+            object shapeDinheiro: TShape
               Left = 0
               Top = 0
               Width = 150
@@ -1068,6 +1059,12 @@ object formFinalizarVenda: TformFinalizarVenda
               Shape = stRoundRect
               ExplicitLeft = 24
               ExplicitTop = 8
+            end
+            object Shape8: TShape
+              Left = 64
+              Top = -16
+              Width = 81
+              Height = 100
             end
             object Panel10: TPanel
               AlignWithMargins = True
@@ -1091,7 +1088,7 @@ object formFinalizarVenda: TformFinalizarVenda
                 Align = alTop
                 BevelOuter = bvNone
                 TabOrder = 0
-                object Image4: TImage
+                object imgDinheiro: TImage
                   AlignWithMargins = True
                   Left = 45
                   Top = 0
@@ -2197,6 +2194,7 @@ object formFinalizarVenda: TformFinalizarVenda
                     000000000D080400000000D0804000000000000D080400000000D080FC7FA5A9
                     D77F6728723C0000000049454E44AE426082}
                   Stretch = True
+                  OnClick = imgDinheiroClick
                   ExplicitLeft = 0
                   ExplicitHeight = 41
                 end
@@ -2214,7 +2212,7 @@ object formFinalizarVenda: TformFinalizarVenda
             end
           end
         end
-        object pnlInformacoesPagamento: TPanel
+        object pnlContainerPG: TPanel
           Left = 30
           Top = 141
           Width = 507
@@ -2228,10 +2226,10 @@ object formFinalizarVenda: TformFinalizarVenda
           Font.Name = 'Segoe UI'
           Font.Style = []
           Padding.Top = 20
+          Padding.Bottom = 20
           ParentBackground = False
           ParentFont = False
           TabOrder = 2
-          ExplicitTop = 221
           object Panel5: TPanel
             AlignWithMargins = True
             Left = 0
@@ -2249,8 +2247,6 @@ object formFinalizarVenda: TformFinalizarVenda
             Padding.Right = 10
             ParentBackground = False
             TabOrder = 0
-            ExplicitLeft = 30
-            ExplicitTop = 95
             object Shape7: TShape
               AlignWithMargins = True
               Left = 10
@@ -2267,6 +2263,23 @@ object formFinalizarVenda: TformFinalizarVenda
               ExplicitTop = 0
               ExplicitHeight = 5
             end
+          end
+          object pnlInformacoesPagamento: TPanel
+            Left = 0
+            Top = 45
+            Width = 507
+            Height = 311
+            Align = alClient
+            BevelOuter = bvNone
+            Color = 13288645
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 6708056
+            Font.Height = -19
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 1
           end
         end
       end
@@ -4563,8 +4576,6 @@ object formFinalizarVenda: TformFinalizarVenda
                 Color = 5589317
                 TabOrder = 0
                 Text = '0,00'
-                ExplicitLeft = 73
-                ExplicitWidth = 160
               end
             end
           end

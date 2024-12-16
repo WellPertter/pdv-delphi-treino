@@ -114,9 +114,6 @@ object formFinalizarVenda: TformFinalizarVenda
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
-        ExplicitLeft = 30
-        ExplicitWidth = 507
-        ExplicitHeight = 61
         object pnlTitleFormaPagament: TPanel
           Left = 30
           Top = 0
@@ -139,7 +136,6 @@ object formFinalizarVenda: TformFinalizarVenda
           ParentBackground = False
           ParentFont = False
           TabOrder = 0
-          ExplicitLeft = 33
         end
         object pnlOpecoesFormas: TPanel
           AlignWithMargins = True
@@ -163,9 +159,6 @@ object formFinalizarVenda: TformFinalizarVenda
           ParentBackground = False
           ParentFont = False
           TabOrder = 1
-          ExplicitLeft = 60
-          ExplicitTop = 41
-          ExplicitWidth = 447
           object pnlButtonOne: TPanel
             AlignWithMargins = True
             Left = 0
@@ -214,8 +207,6 @@ object formFinalizarVenda: TformFinalizarVenda
               BevelOuter = bvNone
               ParentBackground = False
               TabOrder = 0
-              ExplicitLeft = -22
-              ExplicitTop = -27
               object pnlImagemCartao: TPanel
                 Left = 0
                 Top = 0
@@ -497,9 +488,6 @@ object formFinalizarVenda: TformFinalizarVenda
                 BevelOuter = bvNone
                 Caption = 'Cart'#227'o'
                 TabOrder = 1
-                ExplicitLeft = 16
-                ExplicitTop = 9
-                ExplicitHeight = 41
               end
             end
           end
@@ -525,7 +513,6 @@ object formFinalizarVenda: TformFinalizarVenda
             ParentBackground = False
             ParentFont = False
             TabOrder = 1
-            ExplicitLeft = 8
             object Shape5: TShape
               Left = 0
               Top = 0
@@ -1018,6 +1005,7 @@ object formFinalizarVenda: TformFinalizarVenda
                     0038408001007080000300E000010600C001020C008003041800000708300000
                     0EFC7F2E10D7A3E03230730000000049454E44AE426082}
                   Stretch = True
+                  OnClick = Image3Click
                   ExplicitLeft = 0
                   ExplicitHeight = 41
                 end
@@ -1056,7 +1044,6 @@ object formFinalizarVenda: TformFinalizarVenda
             ParentBackground = False
             ParentFont = False
             TabOrder = 2
-            ExplicitLeft = 8
             object Shape6: TShape
               Left = 0
               Top = 0
@@ -2232,8 +2219,6 @@ object formFinalizarVenda: TformFinalizarVenda
           ParentBackground = False
           ParentFont = False
           TabOrder = 2
-          ExplicitLeft = 70
-          ExplicitTop = 147
           object Panel5: TPanel
             AlignWithMargins = True
             Left = 0
@@ -2251,8 +2236,6 @@ object formFinalizarVenda: TformFinalizarVenda
             Padding.Right = 10
             ParentBackground = False
             TabOrder = 0
-            ExplicitLeft = 30
-            ExplicitTop = 95
             object Shape7: TShape
               AlignWithMargins = True
               Left = 10
@@ -2269,6 +2252,23 @@ object formFinalizarVenda: TformFinalizarVenda
               ExplicitTop = 0
               ExplicitHeight = 5
             end
+          end
+          object pnlInformacoesPagamento: TPanel
+            Left = 0
+            Top = 45
+            Width = 507
+            Height = 311
+            Align = alClient
+            BevelOuter = bvNone
+            Color = 13288645
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 6708056
+            Font.Height = -19
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 1
           end
         end
       end
@@ -4565,8 +4565,6 @@ object formFinalizarVenda: TformFinalizarVenda
                 Color = 5589317
                 TabOrder = 0
                 Text = '0,00'
-                ExplicitLeft = 73
-                ExplicitWidth = 160
               end
             end
           end

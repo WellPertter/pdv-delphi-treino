@@ -7,8 +7,7 @@ uses
   acpdv.view.component.transparence in '..\src\view\component\acpdv.view.component.transparence.pas' {formTransparence},
   apdv.datamodule.dados in '..\src\model\apdv.datamodule.dados.pas' {DMdados: TDataModule},
   acpdv.view.pagament in '..\src\view\acpdv.view.pagament.pas' {formFinalizarVenda},
-  acpdv.view.frame.pix in '..\src\view\acpdv.view.frame.pix.pas' {framePIX: TFrame},
-  acpdv.view.frame.dinheiro in '..\src\view\acpdv.view.frame.dinheiro.pas' {formDinheiro: TFrame};
+  acpdv.view.frame.pix in '..\src\view\acpdv.view.frame.pix.pas' {framePIX: TFrame};
 
 {$R *.res}
 
