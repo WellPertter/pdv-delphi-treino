@@ -1,0 +1,34 @@
+object formIdentificarCliente: TformIdentificarCliente
+  Left = 0
+  Top = 0
+  AlphaBlend = True
+  AlphaBlendValue = 230
+  BorderStyle = bsNone
+  Caption = 'formIdentificarCliente'
+  ClientHeight = 710
+  ClientWidth = 1190
+  Color = clBackground
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object pnlContainerMain: TPanel
+    Left = 352
+    Top = 128
+    Width = 450
+    Height = 200
+    BevelOuter = bvNone
+    TabOrder = 0
+    object pnlTop: TPanel
+      Left = 0
+      Top = 0
+      Width = 450
+      Height = 81
+      Align = alTop
+      BevelOuter = bvNone
+      TabOrder = 0
+    end
+  end
+end

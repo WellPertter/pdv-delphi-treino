@@ -9,8 +9,7 @@ uses
   acpdv.view.pagament in '..\src\view\acpdv.view.pagament.pas' {formFinalizarVenda},
   acpdv.view.frame.pix in '..\src\view\acpdv.view.frame.pix.pas' {framePIX: TFrame},
   acpdv.view.frame.dinheiro in '..\src\view\acpdv.view.frame.dinheiro.pas' {frameDinheiro: TFrame},
-  acpdv.view.frame.cartao in '..\src\view\acpdv.view.frame.cartao.pas' {frameCartao: TFrame},
-  acpdv.view.identificar.cliente in '..\src\view\acpdv.view.identificar.cliente.pas' {formIdentificarCliente};
+  acpdv.view.frame.cartao in '..\src\view\acpdv.view.frame.cartao.pas' {frameCartao: TFrame};
 
 {$R *.res}
 
@@ -20,6 +19,5 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TDMdados, DMdados);
-  Application.CreateForm(TformIdentificarCliente, formIdentificarCliente);
   Application.Run;
 end.
