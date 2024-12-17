@@ -154,21 +154,22 @@ begin
     end;
     VK_CONTROL:
     begin
-
+      {
      TformIdentificarCliente.New(self)
-    .Embed(pnlContainer)
-    .show;
+    .Embed(pnlMaster)
+    .show; }
 
-//      FPageIdentificacao.Show;
+     FPageIdentificacao.Show;
 
     end;
     VK_F9:
     begin
 
+      FPageIdentificacao.identificarCPF.Show;    {
       TformIdentificarCliente.New(self)
       .identificarCPF()
-      .Embed(pnlContainer)
-      .show;
+      .Embed(pnlMaster)
+      .show;    ||\                   }
 
     end;
   end;

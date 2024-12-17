@@ -155,20 +155,26 @@ begin
     VK_CONTROL:
     begin
 
-     TformIdentificarCliente.New(self)
+    { TformIdentificarCliente.New(self)
     .Embed(pnlMaster)
-    .show;
+    .show;        }
 
-//      FPageIdentificacao.Show;
+    try
+      FPageIdentificacao.ShowModal;
+    finally
+
+    end;
+
 
     end;
     VK_F9:
     begin
 
+      FPageIdentificacao.identificarCPF.ShowModal;    {
       TformIdentificarCliente.New(self)
       .identificarCPF()
       .Embed(pnlMaster)
-      .show;
+      .show;    ||\                   }
 
     end;
   end;

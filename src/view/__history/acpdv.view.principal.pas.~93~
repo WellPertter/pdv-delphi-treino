@@ -20,7 +20,8 @@ uses
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Data.DB,
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Imaging.jpeg, acpdv.view.login,
-  Vcl.WinXCtrls, apdv.datamodule.dados, acpdv.view.pagament;
+  Vcl.WinXCtrls, apdv.datamodule.dados, acpdv.view.pagament,
+  acpdv.view.identificar.cliente;
 
 type
   TfrmPrincipal = class(TForm)
@@ -103,6 +104,7 @@ type
   private
     FLogin: TformLogin;
     FPagamentos: TformFinalizarVenda;
+    FPageIdentificacao :TformIdentificarCliente;
 
     procedure MontarButtons;
     procedure FormFix;
@@ -150,6 +152,29 @@ begin
       splitViewPagament.Opened := not splitViewPagament.Opened;
 
     end;
+    VK_CONTROL:
+    begin
+
+      try
+        FPageIdentificacao:=TformIdentificarCliente.Create(nil);
+        FPageIdentificacao.ShowModal;
+      finally
+        FreeAndNil(FPageIdentificacao);
+      end;
+
+
+    end;
+    VK_F9:
+    begin
+
+      try
+        FPageIdentificacao:=TformIdentificarCliente.Create(nil);
+        FPageIdentificacao.identificarCPF.ShowModal;
+      finally
+        FreeAndNil(FPageIdentificacao);
+      end;
+
+    end;
   end;
 
 end;
@@ -181,7 +206,6 @@ begin
   FLogin.Parent := pnlMaster;
   FLogin.Show;
   FLogin.edtUsuario.SetFocus;
-
 
 end;
 

@@ -155,20 +155,23 @@ begin
     VK_CONTROL:
     begin
 
-      TformIdentificarCliente.New(self)
-      .Embed(pnlMaster)
-      .show;
-
-    //  FPageIdentificacao.Show;
+      try
+        FPageIdentificacao:=TformIdentificarCliente.Create(nil);
+        FPageIdentificacao.ShowModal;
+      finally
+        FreeAndNil(FPageIdentificacao);
+      end;
 
     end;
     VK_F9:
     begin
 
-      TformIdentificarCliente.New(self)
-      .identificarCPF()
-      .Embed(pnlMaster)
-      .show;
+      try
+        FPageIdentificacao:=TformIdentificarCliente.Create(nil);
+        FPageIdentificacao.identificarCPF.ShowModal;
+      finally
+        FreeAndNil(FPageIdentificacao);
+      end;
 
     end;
   end;
@@ -184,7 +187,6 @@ procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   FreeAndNil(FLogin);
   FreeAndNil(FPagamentos);
-  FreeAndNil(FPageIdentificacao);
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
@@ -204,7 +206,6 @@ begin
   FLogin.Show;
   FLogin.edtUsuario.SetFocus;
 
-  FPageIdentificacao:=TformIdentificarCliente.Create(nil);
 end;
 
 procedure TfrmPrincipal.MontarButtons;

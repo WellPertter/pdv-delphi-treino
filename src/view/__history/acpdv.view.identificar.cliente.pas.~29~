@@ -36,6 +36,8 @@ type
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure imgConfirmarClick(Sender: TObject);
+    procedure edtCpfCnpjKeyUp(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -53,6 +55,14 @@ implementation
 
 {$R *.dfm}
 
+procedure TformIdentificarCliente.edtCpfCnpjKeyUp(Sender: TObject;
+  var Key: Word; Shift: TShiftState);
+begin
+  if Key = VK_ESCAPE then
+    Close;
+
+end;
+
 function TformIdentificarCliente.Embed(
   Value: TWincontrol): TformIdentificarCliente;
 begin
@@ -67,13 +77,14 @@ begin
   FHeight := Round((self.Height - pnlContainerMain.Height) / 2);
   FWidth  := Round((self.Width - pnlContainerMain.Width) / 2);
 
-
-  pnlContainerMain.Margins.Left   := FWidth;
+  pnlContainerMain.Left := FWidth;
+  pnlContainerMain.Top  := FHeight;
+  { pnlContainerMain.Margins.Left   := FWidth;
   pnlContainerMain.Margins.right  := FHeight;
   pnlContainerMain.Margins.top    := FWidth;
   pnlContainerMain.Margins.Bottom := FWidth;
 
-  pnlContainerMain.Align := alClient;
+  //pnlContainerMain.Align := alClient;        :}
 end;
 
 procedure TformIdentificarCliente.FormShow(Sender: TObject);
@@ -85,7 +96,7 @@ function TformIdentificarCliente.identificarCPF: TformIdentificarCliente;
 begin
   Result := self; // este
   pnlNome.visible := false;
-//  pnlImagemCartao.Height := (pnlImagemCartao.Height-pnlNome.Height);
+  pnlContainerMain.Height := pnlContainerMain.Height - pnlNome.Height;
 end;
 
 procedure TformIdentificarCliente.imgConfirmarClick(Sender: TObject);
