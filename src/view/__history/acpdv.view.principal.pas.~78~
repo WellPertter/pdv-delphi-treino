@@ -20,7 +20,7 @@ uses
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Data.DB,
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Imaging.jpeg, acpdv.view.login,
-  Vcl.WinXCtrls;
+  Vcl.WinXCtrls, apdv.datamodule.dados, acpdv.view.pagament;
 
 type
   TfrmPrincipal = class(TForm)
@@ -102,6 +102,8 @@ type
     procedure btnMenuFuncoesClick(Sender: TObject);
   private
     FLogin: TformLogin;
+    FPagamentos: TformFinalizarVenda;
+
     procedure MontarButtons;
     procedure FormFix;
 
@@ -115,8 +117,6 @@ var
   frmPrincipal: TfrmPrincipal;
 
 implementation
-
-uses apdv.datamodule.dados, acpdv.view.pagament;
 
 {$R *.dfm}
 
@@ -134,8 +134,7 @@ end;
 
 procedure TfrmPrincipal.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
-var
-  iPagamentos: TformFinalizarVenda;
+
 begin
 
   case key of
@@ -148,9 +147,6 @@ begin
     VK_F7:
     begin
 
-      iPagamentos := TformFinalizarVenda.Create(nil);
-      iPagamentos.parent := pnlPG;
-      iPagamentos.show;
       splitViewPagament.Opened := not splitViewPagament.Opened;
 
     end;
@@ -165,7 +161,8 @@ end;
 
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  FLogin.free;
+  FreeAndNil(FLogin);
+  FreeAndNil(FPagamentos);
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
@@ -175,10 +172,17 @@ end;
 
 procedure TfrmPrincipal.FormShow(Sender: TObject);
 begin
+  FPagamentos := TformFinalizarVenda.Create(nil);
+
+  FPagamentos.parent := pnlPG;
+  FPagamentos.show;
+
   FLogin := TformLogin.Create(nil);
   FLogin.Parent := pnlMaster;
   FLogin.Show;
   FLogin.edtUsuario.SetFocus;
+
+
 end;
 
 procedure TfrmPrincipal.MontarButtons;

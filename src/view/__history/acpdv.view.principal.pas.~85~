@@ -20,7 +20,8 @@ uses
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Data.DB,
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Imaging.jpeg, acpdv.view.login,
-  Vcl.WinXCtrls, apdv.datamodule.dados, acpdv.view.pagament;;
+  Vcl.WinXCtrls, apdv.datamodule.dados, acpdv.view.pagament,
+  acpdv.view.identificar.cliente;
 
 type
   TfrmPrincipal = class(TForm)
@@ -103,6 +104,7 @@ type
   private
     FLogin: TformLogin;
     FPagamentos: TformFinalizarVenda;
+    FPageIdentificacao :TformIdentificarCliente;
 
     procedure MontarButtons;
     procedure FormFix;
@@ -147,9 +149,26 @@ begin
     VK_F7:
     begin
 
-      FPagamentos.parent := pnlPG;
-      FPagamentos.show;
       splitViewPagament.Opened := not splitViewPagament.Opened;
+
+    end;
+    VK_CONTROL:
+    begin
+
+     TformIdentificarCliente.New(self)
+    .Embed(pnlMaster)
+    .show;
+
+//      FPageIdentificacao.Show;
+
+    end;
+    VK_F9:
+    begin
+
+      TformIdentificarCliente.New(self)
+      .identificarCPF()
+      .Embed(pnlMaster)
+      .show;
 
     end;
   end;
@@ -163,8 +182,9 @@ end;
 
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  FLogin.free;
-  FPagamentos.free;
+  FreeAndNil(FLogin);
+  FreeAndNil(FPagamentos);
+  FreeAndNil(FPageIdentificacao);
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
@@ -176,10 +196,15 @@ procedure TfrmPrincipal.FormShow(Sender: TObject);
 begin
   FPagamentos := TformFinalizarVenda.Create(nil);
 
+  FPagamentos.parent := pnlPG;
+  FPagamentos.show;
+
   FLogin := TformLogin.Create(nil);
   FLogin.Parent := pnlMaster;
   FLogin.Show;
   FLogin.edtUsuario.SetFocus;
+
+  FPageIdentificacao:=TformIdentificarCliente.Create(nil);
 end;
 
 procedure TfrmPrincipal.MontarButtons;

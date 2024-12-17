@@ -1,8 +1,6 @@
 object formIdentificarCliente: TformIdentificarCliente
-  AlignWithMargins = True
   Left = 0
   Top = 0
-  Align = alClient
   AlphaBlend = True
   AlphaBlendValue = 230
   BorderStyle = bsNone
@@ -15,20 +13,13 @@ object formIdentificarCliente: TformIdentificarCliente
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poDesktopCenter
-  OnResize = FormResize
   OnShow = FormShow
   TextHeight = 15
   object pnlContainerMain: TPanel
-    AlignWithMargins = True
     Left = 336
     Top = 160
     Width = 450
     Height = 241
-    Margins.Left = 0
-    Margins.Top = 0
-    Margins.Right = 0
-    Margins.Bottom = 0
     BevelOuter = bvNone
     Font.Charset = DEFAULT_CHARSET
     Font.Color = 6708056
@@ -94,7 +85,7 @@ object formIdentificarCliente: TformIdentificarCliente
         ExplicitTop = -16
         ExplicitHeight = 1
       end
-      object lblCPFCNPJ: TLabel
+      object Label1: TLabel
         Left = 0
         Top = 0
         Width = 450
@@ -1133,8 +1124,7 @@ object formIdentificarCliente: TformIdentificarCliente
             Align = alTop
             BevelOuter = bvNone
             TabOrder = 0
-            OnClick = imgConfirmarClick
-            object imgConfirmar: TImage
+            object Image1: TImage
               AlignWithMargins = True
               Left = 27
               Top = 0
@@ -1726,7 +1716,6 @@ object formIdentificarCliente: TformIdentificarCliente
                 10000000005208010000002085100000000052C8FF07573D837193CCAB600000
                 000049454E44AE426082}
               Stretch = True
-              OnClick = imgConfirmarClick
               ExplicitLeft = 45
               ExplicitWidth = 120
             end
@@ -1740,7 +1729,6 @@ object formIdentificarCliente: TformIdentificarCliente
             BevelOuter = bvNone
             Caption = 'Confirmar'
             TabOrder = 1
-            OnClick = imgConfirmarClick
           end
         end
       end

@@ -67,14 +67,14 @@ begin
   FHeight := Round((self.Height - pnlContainerMain.Height) / 2);
   FWidth  := Round((self.Width - pnlContainerMain.Width) / 2);
 
-  pnlContainerMain.Left := FWidth;
-  pnlContainerMain.Top  := FHeight;
-  { pnlContainerMain.Margins.Left   := FWidth;
+   { pnlContainerMain.Left := FWidth;
+   pnlContainerMain.Top  := FHeight;       :}
+  pnlContainerMain.Margins.Left   := FWidth;
   pnlContainerMain.Margins.right  := FHeight;
   pnlContainerMain.Margins.top    := FWidth;
   pnlContainerMain.Margins.Bottom := FWidth;
 
-  //pnlContainerMain.Align := alClient;        :}
+  pnlContainerMain.Align := alClient;
 end;
 
 procedure TformIdentificarCliente.FormShow(Sender: TObject);

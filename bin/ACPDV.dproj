@@ -165,6 +165,12 @@
                 <Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2025.1.1\Trial\LibRS29\VCL\Win32\dclfqbIBX29.bpl">FastQueryBuilder - IBX Engine by Fast Reports Inc</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2025.1.1\Trial\LibRS29\VCL\Win32\dclfrxIBX29.bpl">FastReport VCL - IBX Components by Fast Reports Inc</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2025.1.1\Trial\LibRS29\VCL\Win32\dclfsIBX29.bpl">FastScript VCL - IBX Components by Fast Reports Inc</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2025.1.1\Trial\LibRS29\VCL\Win32\frxIBXQueryBuilder29.bpl">FastReport VCL - FastQueryBuilder - IBX by Fast Reports Inc</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2025.1.1\Trial\LibRS29\FMX\Win32\dclFMXfrxIBX29.bpl">FastReport FMX - IBX Components by Fast Reports Inc</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2025.1.1\Trial\LibRS29\FMX\Win32\dclFMXfsIBX29.bpl">FastScript FMX - IBX Components by Fast Reports Inc</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">

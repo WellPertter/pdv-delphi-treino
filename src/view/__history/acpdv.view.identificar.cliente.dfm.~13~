@@ -1,8 +1,6 @@
 object formIdentificarCliente: TformIdentificarCliente
-  AlignWithMargins = True
   Left = 0
   Top = 0
-  Align = alClient
   AlphaBlend = True
   AlphaBlendValue = 230
   BorderStyle = bsNone
@@ -15,7 +13,6 @@ object formIdentificarCliente: TformIdentificarCliente
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poDesktopCenter
   OnResize = FormResize
   OnShow = FormShow
   TextHeight = 15

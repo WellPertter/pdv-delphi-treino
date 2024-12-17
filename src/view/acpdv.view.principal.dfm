@@ -27,8 +27,6 @@ object frmPrincipal: TfrmPrincipal
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 1364
-    ExplicitHeight = 718
     object pnlContainer: TPanel
       Left = 0
       Top = 0
@@ -37,8 +35,6 @@ object frmPrincipal: TfrmPrincipal
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitWidth = 1364
-      ExplicitHeight = 718
       DesignSize = (
         1366
         726)
