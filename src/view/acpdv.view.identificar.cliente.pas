@@ -39,12 +39,14 @@ type
     procedure edtCpfCnpjKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
   private
+    FProc: TProc<string, string> ;
     { Private declarations }
   public
     class function New(AOWner: TComponent): TformIdentificarCliente;   // algo mais ancesntral
     function Embed(Value: TWincontrol): TformIdentificarCliente;
     function identificarCPF: TformIdentificarCliente;
 
+    function IdentificarCliente(value: TProc<string, string>): TformIdentificarCliente;
     { Public declarations }
   end;
 
@@ -95,6 +97,13 @@ begin
   edtCpfCnpj.SetFocus;
 end;
 
+function TformIdentificarCliente.IdentificarCliente(
+  value: TProc<string, string>): TformIdentificarCliente;
+begin
+  Result := self;
+  FProc := value;
+end;
+
 function TformIdentificarCliente.identificarCPF: TformIdentificarCliente;
 begin
   Result := self; // este
@@ -104,6 +113,8 @@ end;
 
 procedure TformIdentificarCliente.imgConfirmarClick(Sender: TObject);
 begin
+  if assigned(FProc) then
+    FProc(edtCpfCnpj.Text, edtNome.text);
   ShowMessage('Confirmado!');
   self.close;
 end;

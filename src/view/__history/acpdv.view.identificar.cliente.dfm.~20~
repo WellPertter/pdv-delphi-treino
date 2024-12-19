@@ -1,6 +1,8 @@
 object formIdentificarCliente: TformIdentificarCliente
+  AlignWithMargins = True
   Left = 0
   Top = 0
+  Align = alClient
   AlphaBlend = True
   AlphaBlendValue = 230
   BorderStyle = bsNone
@@ -13,24 +15,30 @@ object formIdentificarCliente: TformIdentificarCliente
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poDesktopCenter
   OnResize = FormResize
   OnShow = FormShow
   TextHeight = 15
   object pnlContainerMain: TPanel
+    AlignWithMargins = True
     Left = 336
     Top = 160
     Width = 450
     Height = 241
+    Margins.Left = 0
+    Margins.Top = 0
+    Margins.Right = 0
+    Margins.Bottom = 0
     BevelOuter = bvNone
     Font.Charset = DEFAULT_CHARSET
     Font.Color = 6708056
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
+    Locked = True
     ParentFont = False
     TabOrder = 0
     object pnlTop: TPanel
-      AlignWithMargins = True
       Left = 0
       Top = 0
       Width = 450
@@ -41,11 +49,13 @@ object formIdentificarCliente: TformIdentificarCliente
       Align = alTop
       BevelOuter = bvNone
       Caption = 'Identifica'#231#227'o do Cliente'
+      Color = 13288645
       Font.Charset = DEFAULT_CHARSET
       Font.Color = 6708056
       Font.Height = -19
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 0
       object Shape1: TShape
@@ -58,9 +68,8 @@ object formIdentificarCliente: TformIdentificarCliente
       end
     end
     object pnlTop2CpfCNPJ: TPanel
-      AlignWithMargins = True
       Left = 0
-      Top = 52
+      Top = 49
       Width = 450
       Height = 49
       Margins.Left = 0
@@ -68,13 +77,16 @@ object formIdentificarCliente: TformIdentificarCliente
       Margins.Right = 0
       Align = alTop
       BevelOuter = bvNone
+      Color = 13288645
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 1
+      ExplicitTop = 52
       object Shape2: TShape
         Left = 0
         Top = 21
@@ -86,56 +98,65 @@ object formIdentificarCliente: TformIdentificarCliente
         ExplicitTop = -16
         ExplicitHeight = 1
       end
-      object Label1: TLabel
+      object lblCPFCNPJ: TLabel
         Left = 0
         Top = 0
         Width = 450
         Height = 21
         Align = alTop
         Caption = 'CPF / CNPJ '
+        Color = 13288645
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 6708056
         Font.Height = -16
         Font.Name = 'Segoe UI'
         Font.Style = []
+        ParentColor = False
         ParentFont = False
         ExplicitWidth = 81
       end
       object edtCpfCnpj: TEdit
-        AlignWithMargins = True
-        Left = 3
-        Top = 24
-        Width = 444
-        Height = 22
+        Left = 0
+        Top = 21
+        Width = 450
+        Height = 28
         Align = alClient
         BorderStyle = bsNone
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 6708056
-        Font.Height = -16
+        Font.Height = -19
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnKeyUp = edtCpfCnpjKeyUp
+        ExplicitLeft = 3
+        ExplicitTop = 24
+        ExplicitWidth = 444
+        ExplicitHeight = 22
       end
     end
     object pnlNome: TPanel
-      AlignWithMargins = True
       Left = 0
-      Top = 104
+      Top = 98
       Width = 450
       Height = 49
       Margins.Left = 0
       Margins.Top = 0
       Margins.Right = 0
+      Margins.Bottom = 0
       Align = alTop
       BevelOuter = bvNone
+      Color = 13288645
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 2
+      ExplicitTop = 104
       object Shape3: TShape
         Left = 0
         Top = 21
@@ -154,38 +175,43 @@ object formIdentificarCliente: TformIdentificarCliente
         Height = 21
         Align = alTop
         Caption = 'Nome'
+        Color = 13288645
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 6708056
         Font.Height = -16
         Font.Name = 'Segoe UI'
         Font.Style = []
+        ParentColor = False
         ParentFont = False
         ExplicitWidth = 43
       end
       object edtNome: TEdit
-        AlignWithMargins = True
-        Left = 3
-        Top = 24
-        Width = 444
-        Height = 22
+        Left = 0
+        Top = 21
+        Width = 450
+        Height = 28
         Align = alClient
         BorderStyle = bsNone
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 6708056
-        Font.Height = -16
+        Font.Height = -19
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        ExplicitLeft = 3
+        ExplicitTop = 24
+        ExplicitWidth = 444
+        ExplicitHeight = 22
       end
     end
     object pnlOpecoesFormas: TPanel
       Left = 0
-      Top = 156
+      Top = 147
       Width = 450
-      Height = 85
+      Height = 94
       Margins.Left = 0
-      Margins.Top = 0
+      Margins.Top = 5
       Margins.Right = 0
       Margins.Bottom = 0
       Align = alClient
@@ -200,12 +226,14 @@ object formIdentificarCliente: TformIdentificarCliente
       ParentBackground = False
       ParentFont = False
       TabOrder = 3
+      ExplicitTop = 156
+      ExplicitHeight = 85
       object pnlButtonOne: TPanel
         AlignWithMargins = True
         Left = 10
         Top = 5
         Width = 120
-        Height = 75
+        Height = 84
         Margins.Left = 10
         Margins.Top = 5
         Margins.Right = 5
@@ -222,11 +250,12 @@ object formIdentificarCliente: TformIdentificarCliente
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
+        ExplicitHeight = 75
         object shapeCartaoCredito: TShape
           Left = 0
           Top = 0
           Width = 120
-          Height = 75
+          Height = 84
           Align = alClient
           Brush.Color = clBtnFace
           Pen.Color = 1357025
@@ -240,7 +269,7 @@ object formIdentificarCliente: TformIdentificarCliente
           Left = 5
           Top = 5
           Width = 110
-          Height = 65
+          Height = 74
           Margins.Left = 5
           Margins.Top = 5
           Margins.Right = 5
@@ -249,6 +278,7 @@ object formIdentificarCliente: TformIdentificarCliente
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
+          ExplicitHeight = 65
           object pnlImagemCartao: TPanel
             Left = 0
             Top = 0
@@ -1052,19 +1082,20 @@ object formIdentificarCliente: TformIdentificarCliente
                 C4100500008018A20000001043FF0BFC8299D276707D580000000049454E44AE
                 426082}
               Stretch = True
-              ExplicitLeft = 45
-              ExplicitWidth = 120
+              ExplicitLeft = 91
+              ExplicitTop = -3
             end
           end
           object Panel6: TPanel
             Left = 0
             Top = 49
             Width = 110
-            Height = 16
+            Height = 25
             Align = alClient
             BevelOuter = bvNone
             Caption = 'Pesquisar'
             TabOrder = 1
+            ExplicitHeight = 16
           end
         end
       end
@@ -1073,7 +1104,7 @@ object formIdentificarCliente: TformIdentificarCliente
         Left = 320
         Top = 5
         Width = 120
-        Height = 75
+        Height = 84
         Margins.Left = 5
         Margins.Top = 5
         Margins.Right = 10
@@ -1090,11 +1121,12 @@ object formIdentificarCliente: TformIdentificarCliente
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
+        ExplicitHeight = 75
         object Shape4: TShape
           Left = 0
           Top = 0
           Width = 120
-          Height = 75
+          Height = 84
           Align = alClient
           Brush.Color = clBtnFace
           Pen.Color = 1357025
@@ -1108,7 +1140,7 @@ object formIdentificarCliente: TformIdentificarCliente
           Left = 5
           Top = 5
           Width = 110
-          Height = 65
+          Height = 74
           Margins.Left = 5
           Margins.Top = 5
           Margins.Right = 5
@@ -1117,6 +1149,7 @@ object formIdentificarCliente: TformIdentificarCliente
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
+          ExplicitHeight = 65
           object Panel3: TPanel
             Left = 0
             Top = 0
@@ -1125,7 +1158,8 @@ object formIdentificarCliente: TformIdentificarCliente
             Align = alTop
             BevelOuter = bvNone
             TabOrder = 0
-            object Image1: TImage
+            OnClick = imgConfirmarClick
+            object imgConfirmar: TImage
               AlignWithMargins = True
               Left = 27
               Top = 0
@@ -1717,6 +1751,7 @@ object formIdentificarCliente: TformIdentificarCliente
                 10000000005208010000002085100000000052C8FF07573D837193CCAB600000
                 000049454E44AE426082}
               Stretch = True
+              OnClick = imgConfirmarClick
               ExplicitLeft = 45
               ExplicitWidth = 120
             end
@@ -1725,11 +1760,13 @@ object formIdentificarCliente: TformIdentificarCliente
             Left = 0
             Top = 49
             Width = 110
-            Height = 16
+            Height = 25
             Align = alClient
             BevelOuter = bvNone
             Caption = 'Confirmar'
             TabOrder = 1
+            OnClick = imgConfirmarClick
+            ExplicitHeight = 16
           end
         end
       end

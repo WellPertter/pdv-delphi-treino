@@ -86,7 +86,6 @@ object formIdentificarCliente: TformIdentificarCliente
       ParentBackground = False
       ParentFont = False
       TabOrder = 1
-      ExplicitTop = 52
       object Shape2: TShape
         Left = 0
         Top = 21
@@ -130,10 +129,6 @@ object formIdentificarCliente: TformIdentificarCliente
         ParentFont = False
         TabOrder = 0
         OnKeyUp = edtCpfCnpjKeyUp
-        ExplicitLeft = 3
-        ExplicitTop = 24
-        ExplicitWidth = 444
-        ExplicitHeight = 22
       end
     end
     object pnlNome: TPanel
@@ -156,7 +151,6 @@ object formIdentificarCliente: TformIdentificarCliente
       ParentBackground = False
       ParentFont = False
       TabOrder = 2
-      ExplicitTop = 104
       object Shape3: TShape
         Left = 0
         Top = 21
@@ -199,10 +193,6 @@ object formIdentificarCliente: TformIdentificarCliente
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 3
-        ExplicitTop = 24
-        ExplicitWidth = 444
-        ExplicitHeight = 22
       end
     end
     object pnlOpecoesFormas: TPanel
@@ -226,8 +216,6 @@ object formIdentificarCliente: TformIdentificarCliente
       ParentBackground = False
       ParentFont = False
       TabOrder = 3
-      ExplicitTop = 156
-      ExplicitHeight = 85
       object pnlButtonOne: TPanel
         AlignWithMargins = True
         Left = 10
@@ -250,7 +238,6 @@ object formIdentificarCliente: TformIdentificarCliente
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitHeight = 75
         object shapeCartaoCredito: TShape
           Left = 0
           Top = 0
@@ -278,7 +265,6 @@ object formIdentificarCliente: TformIdentificarCliente
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 65
           object pnlImagemCartao: TPanel
             Left = 0
             Top = 0
@@ -1095,7 +1081,6 @@ object formIdentificarCliente: TformIdentificarCliente
             BevelOuter = bvNone
             Caption = 'Pesquisar'
             TabOrder = 1
-            ExplicitHeight = 16
           end
         end
       end
@@ -1121,7 +1106,6 @@ object formIdentificarCliente: TformIdentificarCliente
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
-        ExplicitHeight = 75
         object Shape4: TShape
           Left = 0
           Top = 0
@@ -1149,7 +1133,6 @@ object formIdentificarCliente: TformIdentificarCliente
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 65
           object Panel3: TPanel
             Left = 0
             Top = 0
@@ -1766,7 +1749,6 @@ object formIdentificarCliente: TformIdentificarCliente
             Caption = 'Confirmar'
             TabOrder = 1
             OnClick = imgConfirmarClick
-            ExplicitHeight = 16
           end
         end
       end
