@@ -97,6 +97,8 @@ type
     splitViewPagament: TSplitView;
     pnlPG: TPanel;
     pnlcpfcliente: TPanel;
+    Panel1: TPanel;
+    Shape18: TShape;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -120,6 +122,9 @@ var
   frmPrincipal: TfrmPrincipal;
 
 implementation
+
+uses
+  acpdv.view.importar.cliente;
 
 {$R *.dfm}
 
@@ -153,19 +158,35 @@ begin
       splitViewPagament.Opened := not splitViewPagament.Opened;
 
     end;
+    VK_F1:
+    begin
+      TformImportarCliente.New(self)
+      .Embed(pnlMaster).Show;
+
+
+
+
+    end;
     VK_CONTROL:
     begin
 
       try
         FPageIdentificacao:=TformIdentificarCliente.Create(nil);
-        FPageIdentificacao.IdentificarCliente(procedure(aClient, aCPF: string)
+        FPageIdentificacao.IdentificarCliente(procedure(aCPF, aCliente: string)
         begin
 
-          if not aClient.isEmpty then
-            aClient := 'Cliente: ' + aClient;
+          if not aCliente.isEmpty then
+            aCliente := 'Cliente: ' + aCliente;
           if not aCPF.isEmpty then
             aCPF := 'CPF: ' + aCPF;
-          if ((not aClient.IsEmpty) or (not aCPF.IsEmpty)) then
+
+          pnlcpfcliente.Caption := aCliente + ' ' + aCPF;
+
+          if ((not aCliente.IsEmpty) or (not aCPF.IsEmpty)) then
+            pnlcpfcliente.Visible := True
+          else
+            pnlcpfcliente.Visible := false;
+
           
         end)
         .ShowModal;
@@ -179,7 +200,19 @@ begin
 
       try
         FPageIdentificacao:=TformIdentificarCliente.Create(nil);
-        FPageIdentificacao.identificarCPF.ShowModal;
+        FPageIdentificacao.IdentificarCliente(procedure (aCpf, aCliente: string)
+        begin
+
+          if not aCpf.IsEmpty then
+          begin
+            pnlcpfcliente.Visible := True;
+            pnlcpfcliente.Caption := 'CPF: ' + aCpf;
+          end
+          else
+            pnlcpfcliente.Visible := false;
+
+        end).
+        identificarCPF.ShowModal;
       finally
         FreeAndNil(FPageIdentificacao);
       end;

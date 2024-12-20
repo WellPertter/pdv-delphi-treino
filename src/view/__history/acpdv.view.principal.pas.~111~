@@ -97,6 +97,8 @@ type
     splitViewPagament: TSplitView;
     pnlPG: TPanel;
     pnlcpfcliente: TPanel;
+    Panel1: TPanel;
+    Shape18: TShape;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -153,22 +155,26 @@ begin
       splitViewPagament.Opened := not splitViewPagament.Opened;
 
     end;
+    VK_F1:
+    begin
+      ShowMessage('oi')
+    end;
     VK_CONTROL:
     begin
 
       try
         FPageIdentificacao:=TformIdentificarCliente.Create(nil);
-        FPageIdentificacao.IdentificarCliente(procedure(aClient, aCPF: string)
+        FPageIdentificacao.IdentificarCliente(procedure(aCPF, aCliente: string)
         begin
 
-          if not aClient.isEmpty then
-            aClient := 'Cliente: ' + aClient;
+          if not aCliente.isEmpty then
+            aCliente := 'Cliente: ' + aCliente;
           if not aCPF.isEmpty then
             aCPF := 'CPF: ' + aCPF;
 
-          pnlcpfcliente.Caption := aClient + ' ' + aCPF;
+          pnlcpfcliente.Caption := aCliente + ' ' + aCPF;
 
-          if ((not aClient.IsEmpty) or (not aCPF.IsEmpty)) then
+          if ((not aCliente.IsEmpty) or (not aCPF.IsEmpty)) then
             pnlcpfcliente.Visible := True
           else
             pnlcpfcliente.Visible := false;
@@ -186,14 +192,16 @@ begin
 
       try
         FPageIdentificacao:=TformIdentificarCliente.Create(nil);
-        FPageIdentificacao.IdentificarCliente(procedure (aCliente, aCpf: string)
+        FPageIdentificacao.IdentificarCliente(procedure (aCpf, aCliente: string)
         begin
+
           if not aCpf.IsEmpty then
           begin
-
-          end;
-
-
+            pnlcpfcliente.Visible := True;
+            pnlcpfcliente.Caption := 'CPF: ' + aCpf;
+          end
+          else
+            pnlcpfcliente.Visible := false;
 
         end).
         identificarCPF.ShowModal;

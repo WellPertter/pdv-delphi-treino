@@ -1,0 +1,75 @@
+unit acpdv.view.importar.cliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons,
+  Vcl.Imaging.pngimage, Data.DB, Vcl.StdCtrls, Vcl.WinXCtrls, Vcl.Grids,
+  Vcl.DBGrids;
+
+type
+  TformImportarCliente = class(TForm)
+    pnlContainer: TPanel;
+    pnlTop: TPanel;
+    pnlInfor: TPanel;
+    pnlSair: TPanel;
+    Image1: TImage;
+    btnSair: TSpeedButton;
+    pnlContainerTitulo: TPanel;
+    pnlUsuario: TPanel;
+    Image2: TImage;
+    SpeedButton1: TSpeedButton;
+    pnlInfoTop: TPanel;
+    pnlInfoAllClient: TPanel;
+    DBGrid1: TDBGrid;
+    Button1: TButton;
+    Shape1: TShape;
+    edtPesquisar: TSearchBox;
+  private
+    FProc: TProc<TObject>;
+
+    { Private declarations }
+  public
+    class function New(AOWner: TComponent): TformImportarCliente;
+    function Titulo(Value: string): TformImportarCliente;
+    function Image(value: string): TformImportarCliente;
+    function Click(Value: TProc<TObject>): TformImportarCliente;
+  end;
+
+var
+  formImportarCliente: TformImportarCliente;
+
+implementation
+
+{$R *.dfm}
+
+{ TformImportarCliente }
+
+function TformImportarCliente.Click(
+  Value: TProc<TObject>): TformImportarCliente;
+begin
+  Result := self;
+  FProc  := value;
+end;
+
+function TformImportarCliente.Image(value: string): TformImportarCliente;
+begin
+  Result := self;
+
+end;
+
+class function TformImportarCliente.New(
+  AOWner: TComponent): TformImportarCliente;
+begin
+  Result := self.Create(AOWner);
+end;
+
+function TformImportarCliente.Titulo(Value: string): TformImportarCliente;
+begin
+  Result := self;
+  pnlContainerTitulo.Caption := 'Lista de ' + value;
+  edtPesquisar.TextHint      := 'Pesquisar ' + value;
+end;
+
+end.

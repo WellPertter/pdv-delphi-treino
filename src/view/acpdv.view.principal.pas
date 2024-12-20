@@ -97,6 +97,8 @@ type
     splitViewPagament: TSplitView;
     pnlPG: TPanel;
     pnlcpfcliente: TPanel;
+    Panel1: TPanel;
+    Shape18: TShape;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -120,6 +122,9 @@ var
   frmPrincipal: TfrmPrincipal;
 
 implementation
+
+uses
+  acpdv.view.importar.cliente;
 
 {$R *.dfm}
 
@@ -151,6 +156,13 @@ begin
     begin
 
       splitViewPagament.Opened := not splitViewPagament.Opened;
+
+    end;
+    VK_F1:
+    begin
+
+      TformImportarCliente.New(self)
+      .Embed(pnlMaster).Show;
 
     end;
     VK_CONTROL:

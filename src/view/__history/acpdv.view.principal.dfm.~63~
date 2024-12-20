@@ -27,6 +27,8 @@ object frmPrincipal: TfrmPrincipal
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitWidth = 1364
+    ExplicitHeight = 718
     object pnlContainer: TPanel
       Left = 0
       Top = 0
@@ -35,6 +37,8 @@ object frmPrincipal: TfrmPrincipal
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 0
+      ExplicitWidth = 1364
+      ExplicitHeight = 718
       DesignSize = (
         1366
         726)
@@ -607,7 +611,7 @@ object frmPrincipal: TfrmPrincipal
             Left = 5
             Top = 5
             Width = 956
-            Height = 556
+            Height = 515
             Align = alClient
             BorderStyle = bsNone
             DataSource = dsItens
@@ -728,6 +732,26 @@ object frmPrincipal: TfrmPrincipal
                 Width = 97
                 Visible = True
               end>
+          end
+          object pnlcpfcliente: TPanel
+            Left = 5
+            Top = 520
+            Width = 956
+            Height = 41
+            Align = alBottom
+            BevelOuter = bvNone
+            Color = 7119398
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 1
+            Visible = False
+            ExplicitTop = 512
+            ExplicitWidth = 954
           end
         end
       end
@@ -1213,7 +1237,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object dsItens: TDataSource
     DataSet = DMdados.cdsItens
-    Left = 48
-    Top = 148
+    Left = 8
+    Top = 108
   end
 end

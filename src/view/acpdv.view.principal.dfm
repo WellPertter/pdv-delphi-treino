@@ -27,8 +27,6 @@ object frmPrincipal: TfrmPrincipal
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 1364
-    ExplicitHeight = 718
     object pnlContainer: TPanel
       Left = 0
       Top = 0
@@ -37,8 +35,6 @@ object frmPrincipal: TfrmPrincipal
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitWidth = 1364
-      ExplicitHeight = 718
       DesignSize = (
         1366
         726)
@@ -743,16 +739,15 @@ object frmPrincipal: TfrmPrincipal
             Color = 7119398
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWhite
-            Font.Height = -15
+            Font.Height = -16
             Font.Name = 'Tahoma'
             Font.Style = []
             ParentBackground = False
             ParentFont = False
             TabOrder = 1
             Visible = False
-            ExplicitLeft = 584
-            ExplicitTop = 440
-            ExplicitWidth = 185
+            ExplicitTop = 512
+            ExplicitWidth = 954
           end
         end
       end
@@ -764,8 +759,6 @@ object frmPrincipal: TfrmPrincipal
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitTop = 618
-        ExplicitWidth = 1364
         object pnlButtons: TPanel
           Left = 0
           Top = 0
@@ -779,7 +772,6 @@ object frmPrincipal: TfrmPrincipal
           Padding.Right = 5
           Padding.Bottom = 10
           TabOrder = 0
-          ExplicitWidth = 1364
           object pnlCancelarOperacao: TPanel
             Left = 25
             Top = 10
@@ -1032,8 +1024,6 @@ object frmPrincipal: TfrmPrincipal
         OpenedWidth = 275
         Placement = svpRight
         TabOrder = 3
-        ExplicitLeft = 1364
-        ExplicitHeight = 552
         object pnlMainSplitView: TPanel
           Left = 0
           Top = 0
@@ -1160,7 +1150,7 @@ object frmPrincipal: TfrmPrincipal
             Height = 57
             Align = alTop
             BevelOuter = bvNone
-            Caption = 'Informar CPF (CRTL)'
+            Caption = 'informar CPF (CRTL)'
             Color = 14342621
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -1207,6 +1197,36 @@ object frmPrincipal: TfrmPrincipal
               ExplicitWidth = 200
             end
           end
+          object Panel1: TPanel
+            Left = 0
+            Top = 342
+            Width = 0
+            Height = 57
+            Align = alTop
+            BevelOuter = bvNone
+            Caption = 'informar Cliente (F1)'
+            Color = 14342621
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 6
+            ExplicitLeft = -6
+            ExplicitTop = 398
+            ExplicitWidth = 275
+            object Shape18: TShape
+              Left = 0
+              Top = 55
+              Width = 0
+              Height = 2
+              Align = alBottom
+              ExplicitTop = -8
+              ExplicitWidth = 200
+            end
+          end
         end
       end
       object splitViewPagament: TSplitView
@@ -1238,7 +1258,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object dsItens: TDataSource
     DataSet = DMdados.cdsItens
-    Left = 48
-    Top = 148
+    Left = 8
+    Top = 108
   end
 end
