@@ -96,6 +96,7 @@ type
     Shape17: TShape;
     splitViewPagament: TSplitView;
     pnlPG: TPanel;
+    pnlcpfcliente: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -157,11 +158,27 @@ begin
 
       try
         FPageIdentificacao:=TformIdentificarCliente.Create(nil);
-        FPageIdentificacao.ShowModal;
+        FPageIdentificacao.IdentificarCliente(procedure(aClient, aCPF: string)
+        begin
+
+          if not aClient.isEmpty then
+            aClient := 'Cliente: ' + aClient;
+          if not aCPF.isEmpty then
+            aCPF := 'CPF: ' + aCPF;
+
+          pnlcpfcliente.Caption := aClient + ' ' + aCPF;
+
+          if ((not aClient.IsEmpty) or (not aCPF.IsEmpty)) then
+            pnlcpfcliente.Visible := True
+          else
+            pnlcpfcliente.Visible := false;
+
+          
+        end)
+        .ShowModal;
       finally
         FreeAndNil(FPageIdentificacao);
       end;
-
 
     end;
     VK_F9:
@@ -169,7 +186,18 @@ begin
 
       try
         FPageIdentificacao:=TformIdentificarCliente.Create(nil);
-        FPageIdentificacao.identificarCPF.ShowModal;
+        FPageIdentificacao.IdentificarCliente(procedure (aCliente, aCpf: string)
+        begin
+
+          if not aCpf.IsEmpty then
+          begin
+
+          end;
+
+
+
+        end).
+        identificarCPF.ShowModal;
       finally
         FreeAndNil(FPageIdentificacao);
       end;

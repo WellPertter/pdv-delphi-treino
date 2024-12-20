@@ -193,6 +193,7 @@ object formIdentificarCliente: TformIdentificarCliente
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnKeyPress = edtNomeKeyPress
       end
     end
     object pnlOpecoesFormas: TPanel

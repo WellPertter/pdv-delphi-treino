@@ -611,7 +611,7 @@ object frmPrincipal: TfrmPrincipal
             Left = 5
             Top = 5
             Width = 956
-            Height = 556
+            Height = 515
             Align = alClient
             BorderStyle = bsNone
             DataSource = dsItens
@@ -732,6 +732,27 @@ object frmPrincipal: TfrmPrincipal
                 Width = 97
                 Visible = True
               end>
+          end
+          object pnlcpfcliente: TPanel
+            Left = 5
+            Top = 520
+            Width = 956
+            Height = 41
+            Align = alBottom
+            BevelOuter = bvNone
+            Color = 7119398
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -15
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 1
+            Visible = False
+            ExplicitLeft = 584
+            ExplicitTop = 440
+            ExplicitWidth = 185
           end
         end
       end

@@ -96,6 +96,7 @@ type
     Shape17: TShape;
     splitViewPagament: TSplitView;
     pnlPG: TPanel;
+    pnlcpfcliente: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -138,9 +139,6 @@ procedure TfrmPrincipal.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 
 begin
-if FLogin = nil then
-  exit;
-
 
   case key of
     VK_ESCAPE: ShowMessage('Cancelar operação!');
@@ -160,7 +158,17 @@ if FLogin = nil then
 
       try
         FPageIdentificacao:=TformIdentificarCliente.Create(nil);
-        FPageIdentificacao.ShowModal;
+        FPageIdentificacao.IdentificarCliente(procedure(aClient, aCPF: string)
+        begin
+
+          if not aClient.isEmpty then
+            aClient := 'Cliente: ' + aClient;
+          if not aCPF.isEmpty then
+            aCPF := 'CPF: ' + aCPF;
+          if ((not aClient.IsEmpty) or (not aCPF.IsEmpty)) then
+          
+        end)
+        .ShowModal;
       finally
         FreeAndNil(FPageIdentificacao);
       end;

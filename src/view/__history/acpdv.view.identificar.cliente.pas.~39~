@@ -38,13 +38,16 @@ type
     procedure imgConfirmarClick(Sender: TObject);
     procedure edtCpfCnpjKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
+    procedure edtNomeKeyPress(Sender: TObject; var Key: Char);
   private
+    FProc: TProc<string, string> ;
     { Private declarations }
   public
     class function New(AOWner: TComponent): TformIdentificarCliente;   // algo mais ancesntral
     function Embed(Value: TWincontrol): TformIdentificarCliente;
     function identificarCPF: TformIdentificarCliente;
 
+    function IdentificarCliente(value: TProc<string, string>): TformIdentificarCliente;
     { Public declarations }
   end;
 
@@ -59,8 +62,21 @@ procedure TformIdentificarCliente.edtCpfCnpjKeyUp(Sender: TObject;
   var Key: Word; Shift: TShiftState);
 begin
   if Key = VK_ESCAPE then
+  begin
+    Key := 0;
     Close;
+  end;
 
+end;
+
+procedure TformIdentificarCliente.edtNomeKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+  if Key = #13 then
+  begin
+    Key := #0;
+    imgConfirmarClick(nil);
+  end;
 end;
 
 function TformIdentificarCliente.Embed(
@@ -92,6 +108,13 @@ begin
   edtCpfCnpj.SetFocus;
 end;
 
+function TformIdentificarCliente.IdentificarCliente(
+  value: TProc<string, string>): TformIdentificarCliente;
+begin
+  Result := self;
+  FProc  := value;
+end;
+
 function TformIdentificarCliente.identificarCPF: TformIdentificarCliente;
 begin
   Result := self; // este
@@ -101,7 +124,8 @@ end;
 
 procedure TformIdentificarCliente.imgConfirmarClick(Sender: TObject);
 begin
-  ShowMessage('Confirmado!');
+  if assigned(FProc) then
+    FProc(edtNome.Text, edtCpfCnpj.text);
   self.close;
 end;
 

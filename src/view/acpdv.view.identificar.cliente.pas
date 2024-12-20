@@ -38,6 +38,7 @@ type
     procedure imgConfirmarClick(Sender: TObject);
     procedure edtCpfCnpjKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
+    procedure edtNomeKeyPress(Sender: TObject; var Key: Char);
   private
     FProc: TProc<string, string> ;
     { Private declarations }
@@ -66,6 +67,16 @@ begin
     Close;
   end;
 
+end;
+
+procedure TformIdentificarCliente.edtNomeKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+  if Key = #13 then
+  begin
+    Key := #0;
+    imgConfirmarClick(nil);
+  end;
 end;
 
 function TformIdentificarCliente.Embed(
@@ -101,7 +112,7 @@ function TformIdentificarCliente.IdentificarCliente(
   value: TProc<string, string>): TformIdentificarCliente;
 begin
   Result := self;
-  FProc := value;
+  FProc  := value;
 end;
 
 function TformIdentificarCliente.identificarCPF: TformIdentificarCliente;
@@ -115,7 +126,6 @@ procedure TformIdentificarCliente.imgConfirmarClick(Sender: TObject);
 begin
   if assigned(FProc) then
     FProc(edtCpfCnpj.Text, edtNome.text);
-  ShowMessage('Confirmado!');
   self.close;
 end;
 

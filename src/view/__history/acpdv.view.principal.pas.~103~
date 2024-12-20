@@ -96,6 +96,7 @@ type
     Shape17: TShape;
     splitViewPagament: TSplitView;
     pnlPG: TPanel;
+    pnlcpfcliente: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -155,27 +156,39 @@ begin
     VK_CONTROL:
     begin
 
-    { TformIdentificarCliente.New(self)
-    .Embed(pnlMaster)
-    .show;        }
+      try
+        FPageIdentificacao:=TformIdentificarCliente.Create(nil);
+        FPageIdentificacao.IdentificarCliente(procedure(aClient, aCPF: string)
+        begin
 
-    try
-      FPageIdentificacao:=TformIdentificarCliente.Create(nil);
-      FPageIdentificacao.ShowModal;
-    finally
+          if not aClient.isEmpty then
+            aClient := 'Cliente: ' + aClient;
+          if not aCPF.isEmpty then
+            aCPF := 'CPF: ' + aCPF;
 
-    end;
+          pnlcpfcliente.Caption := aClient + ' ' + aCPF;
+          if ((not aClient.IsEmpty) or (not aCPF.IsEmpty)) then
+            pnlcpfcliente.Visible := True
+          else
+            pnlcpfcliente.Visible := false;
 
+          
+        end)
+        .ShowModal;
+      finally
+        FreeAndNil(FPageIdentificacao);
+      end;
 
     end;
     VK_F9:
     begin
 
-      FPageIdentificacao.identificarCPF.ShowModal;    {
-      TformIdentificarCliente.New(self)
-      .identificarCPF()
-      .Embed(pnlMaster)
-      .show;    ||\                   }
+      try
+        FPageIdentificacao:=TformIdentificarCliente.Create(nil);
+        FPageIdentificacao.identificarCPF.ShowModal;
+      finally
+        FreeAndNil(FPageIdentificacao);
+      end;
 
     end;
   end;
@@ -191,7 +204,6 @@ procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   FreeAndNil(FLogin);
   FreeAndNil(FPagamentos);
-  FreeAndNil(FPageIdentificacao);
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
